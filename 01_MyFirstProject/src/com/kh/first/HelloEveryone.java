@@ -7,6 +7,7 @@ public class HelloEveryone { // HelloEveryone 클래스 영역 시작
 
 	// 내가 작성하고 싶은 코드를 적는 부분
 	// 단, 소스코드는 클래스 안에 바로 작성 불가능하고, 메소드 안에 작성해야 함
+	// 소스는 자기 혼자 둥둥 떠 다닐 수 없고 메소드 안에 넣어 줘야 함!!
 	
 	// 메소드 만들기
 	
@@ -28,12 +29,13 @@ public class HelloEveryone { // HelloEveryone 클래스 영역 시작
 		 * 1. 메소드는 일반 메소드와 main 메소드로 나뉨(main 메소드이거나 main 메소드가 아니거나)
 		 * => main 메소드: 내가 만든 프로그램의 시작점을 나타내는 메소드
 		 * 				  JVM에 의해 실행됨
-		 * => 일반 메소드: 내가 만들고 싶은 기능 단위별로 만들면 됨
+		 * => 일반 메소드(main 외 모든 메소드): 내가 만들고 싶은 기능 단위별로 만들면 됨
 		 * 				main 메소드이든 일반 메소드이든 간에 다른 메소드에서 실행시켜 줘야 함
 		 * - 메소드를 실행시키는 것을 "호출(call)" 이라고 한다!!
 		 * 2. 하나의 클래스 안에 여러 개의 메소드 존재 가능
 		 * 	   단, 주의할 점! 표면적으로는 메소드명이 중복될 수 없으나
 		 * 	  => 특별한 규칙 (오버로딩) 에 의해서 메소드명이 중복될 수 있음!! 
+		 * 3. 메소드 안에 메소드가 존재할 수 없음
 		 */
 		
 		// 코드 작성 부분
@@ -44,11 +46,16 @@ public class HelloEveryone { // HelloEveryone 클래스 영역 시작
 		System.out.println("Hi everyone!"); // 해당 값을 출력해 주는 구문
 		System.out.println("안녕하세요");
 		
+		// 내용물 출력 없이 줄바꿈만 한 번 하고 싶다?
+		// System.out.println();
+		// System.out.println("");
+		// System.out.print("\n");
+		
 		// System.out.print(내용물); : 내용물을 그냥 출력만 하는 역할
 		System.out.print("여\n러\n분\n~!\n"); // \n: 개행 문자(줄바꿈을 해 주는 특수한 역할의 문자), 출력물 중간에 들어가도 됨
 		System.out.print("반갑습니다^^");
 		
-		// System.out.printf(내용물); : 내용물을 지정된 형식에 맞게 출력해 주는 역할
+		// System.out.printf(내용물); : 내용물을 지정된 형식에 맞게 출력해 주는 역할, f = format의 줄임말
 		
 		/*
 		 * 프로그램의 기본 흐름은 위에서 아래 순서대로 실행된다!!

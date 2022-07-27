@@ -13,9 +13,13 @@ public class VariableRun {
 		A_Variable a = new A_Variable();
 		
 		// 3. printSalary 메소트 호출
-		a.printSalary();
+		// a.printSalary();
+		
+		// a.declareVariable();
+		
+		a.initVariable();
 		
 		
 	}
-
+	
 }
