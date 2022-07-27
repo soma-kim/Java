@@ -191,6 +191,34 @@ public class A_Variable {
 		System.out.println("ch: " + ch);
 		System.out.println("str: " + str);
 		
+	} // initVariable 메소드 영역 끝
+	
+	// 상수
+	public void constant() {
+		
+		// 변수일 경우
+		int age = 20;
+		
+		System.out.println("age: " + age); // 20
+		
+		age = 25;
+		
+		System.out.println("변경된 age: " + age); // 25
+		
+		// 상수일 경우
+		// 한 번 기록된 값은 변경 불가함(항상 고정적인 값을 기록할 때 사용, 파이 같은 거)
+		// [ 표현법 ] final 자료형 상수명 = 값;
+		// => 상수명은 대문자로 짓는다
+		
+		final int AGE = 20;
+		
+		System.out.println("상수 age: "+ AGE); // 20
+		
+		// 만약에 이 시점에서 AGE 라는 상자에 값을 또 대입하는 구문이 나온다면?
+		// AGE = 21; // 오류를 발생시킴
+		
+		
+		
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.kh.run;
 
 import com.kh.variable.A_Variable;
+import com.kh.variable.B_KeyboardInput;
 
 public class VariableRun {
 	
@@ -17,7 +18,25 @@ public class VariableRun {
 		
 		// a.declareVariable();
 		
-		a.initVariable();
+		// a.initVariable();
+		
+		// a.constant();
+		
+		B_KeyboardInput b = new B_KeyboardInput();
+		
+		// b.inputTest1();
+		
+		// b.inputTest2();
+		
+		// b.inputTest3();
+		
+		// b.inputTest4();
+		
+		b.inputTest5();
+		
+		
+		
+		
 		
 		
 	}
