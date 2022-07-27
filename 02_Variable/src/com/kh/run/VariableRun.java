@@ -32,7 +32,9 @@ public class VariableRun {
 		
 		// b.inputTest4();
 		
-		b.inputTest5();
+		// b.inputTest5();
+		
+		b.inputTest6();
 		
 		
 		
