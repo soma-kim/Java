@@ -2,6 +2,7 @@ package com.kh.run;
 
 import com.kh.variable.A_Variable;
 import com.kh.variable.B_KeyboardInput;
+import com.kh.variable.C_Cast;
 
 public class VariableRun {
 	
@@ -34,9 +35,13 @@ public class VariableRun {
 		
 		// b.inputTest5();
 		
-		b.inputTest6();
+		//b.inputTest6();
 		
+		C_Cast c = new C_Cast();
 		 
+		//c.autoCasting();
+		
+		c.forceCasting();
 		
 		
 		
