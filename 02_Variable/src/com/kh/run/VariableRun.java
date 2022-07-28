@@ -36,7 +36,7 @@ public class VariableRun {
 		
 		b.inputTest6();
 		
-		
+		 
 		
 		
 		
