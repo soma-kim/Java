@@ -52,14 +52,19 @@ public class Run {
 		
 		// f.method3();
 		
-		//f.method4();
+		// f.method4();
 		
 		G_Triple g = new G_Triple();
 		
 		// g.method1();
 		
-		g.method2();
+		// g.method2();
 		
+		// g.method3();
+		
+		// g.method4();
+		
+		g.method5();
 		
 		
 	}
