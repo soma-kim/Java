@@ -34,5 +34,6 @@ public class ConditionRun {
 		// a.method1();
 		
 		a.method2();
+		
 	}
 }

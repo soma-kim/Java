@@ -70,6 +70,8 @@ public class A_If {
 		if (num % 2 == 1) {
 			System.out.println("홀수입니다.");
 		}
+		
+		 
 	}
 	
 	
