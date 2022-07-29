@@ -36,7 +36,31 @@ public class Run {
 		
 		D_LogicalNegation d = new D_LogicalNegation();
 		
-		d.method();
+		// d.method();
+		
+		E_Comparison e = new E_Comparison();
+		
+		// e.method1();
+		
+		// e.method2();
+		
+		F_Logical f = new F_Logical();
+		
+		// f.method1();
+		
+		// f.method2();
+		
+		// f.method3();
+		
+		//f.method4();
+		
+		G_Triple g = new G_Triple();
+		
+		// g.method1();
+		
+		g.method2();
+		
+		
 		
 	}
 	
