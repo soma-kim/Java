@@ -199,7 +199,7 @@ public class B_Else {
 		
 			System.out.printf("당신의 점수는 %d점이고, 등급은 %s입니다.", score, result);
 			}
-	}
+
 
 		/*
 		 * 선생님 풀이
@@ -243,8 +243,17 @@ public class B_Else {
 		 *  	// 이 시점에서 출력하면 잘못 입력한 경우에도 출력되게 되는데, 그러기 싫으면  240 줄처럼 return; 써 주면 됨!
 		 *  	System.out.printf("당신의 점수는 %d점이고, 등급은 %c등급입니다.", score, grade);
 		 */
+	
+	// 숙제
+	public void method5() {
+		/* 사용자로부터 이름을 키보드로 입력 받아 본인과 일치할 경우 "본인입니다. 어서오세요."
+		 * 아닐 경우 "일치하지 않습니다. 돌아가세요" 출력
+		 */
+	}
 
 
 
+
+}
 
 
