@@ -184,22 +184,66 @@ public class B_Else {
 		
 		String result = "";
 		
-		if (score >= 90) {
+			if (score >= 90) {
 			result = "A등급";
-		}
-		else if (score >= 80) {
+			}
+			else if (score >= 80) {
 			result = "B등급";
-		}
-		else if (score >= 70) {
+			}
+			else if (score >= 70) {
 			result = "C등급";
-		}
-		else {
+			}
+			else {
 			result = "D등급";
-		}
+			}
 		
-		System.out.printf("당신의 점수는 %d점이고, 등급은 %s입니다.", score, result);
- }
-}
+			System.out.printf("당신의 점수는 %d점이고, 등급은 %s입니다.", score, result);
+			}
+	}
+
+		/*
+		 * 선생님 풀이
+		 * 
+		 * Scanner sc = new Scanner(System.in);
+		 * 
+		 * System.out.println("점수를 입력하세요: ");
+		 * int score = sc.nextInt();
+		 * 
+		 * sc.nextLine();
+		 * 
+		 *  // 등급을 담을 수 있는 변수 지정(char)
+		 * char grade = ' ';
+		 *  // char 자료형의 경우 일반적으로 공백으로 초기화
+		 * 
+		 * if ((score > = 0) && (score <= 100)) {
+		 *  // 0 ~ 100점 사이 = > 유효한 점수로 처리 (등급 판별이 가능)
+		 *  	if (score >= 90) { // 90점 이상일 경우
+		 *  	grade = 'A';
+		 *  	}
+		 *  	else if (score >= 80) { // 80점 이상일 경우
+		 *  	grade = 'B';
+		 *  	}
+		 *  	else if (score >= 70) { // 70점 이상일 경우
+		 *  	grade = 'C';
+		 *  	}
+		 *  	else { // 그 이외의 점수일 경우
+		 *  	grade = 'D';
+		 *  	}
+		 *  
+		 *  	// 이 시점에서 출력
+		 *  	System.out.printf("당신의 점수는 %d점이고, 등급은 %c등급입니다.", score, grade);
+		 *  
+		 *  else {
+		 *  	// 아닐 경우 => 잘못 입력했습니다. (등급 판별이 불가능)
+		 *  	System.out.println("잘못 입력했습니다.");
+		 *  
+		 *  	return; // 나를 호출했던 메소드로 돌아감
+		 *  }
+		 *  
+		 *  	// 이 시점에서 출력하면 잘못 입력한 경우에도 출력되게 되는데, 그러기 싫으면  240 줄처럼 return; 써 주면 됨!
+		 *  	System.out.printf("당신의 점수는 %d점이고, 등급은 %c등급입니다.", score, grade);
+		 */
+
 
 
 
