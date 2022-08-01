@@ -482,6 +482,34 @@ public class A_For {
 			 * 
 			 * 3 4 5 6 7
 			 */
+			
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("정수1 입력: ");
+		int num1 = sc.nextInt();
+		sc.nextLine();
+		
+		System.out.print("정수2 입력: ");
+		int num2 = sc.nextInt();
+		sc.nextLine();
+		
+		if(num1 < num2) {
+			for(int i = num1; i <= num2; i++) {
+				System.out.print(i + " ");
+		}
+	}
+		else if(num1 > num2) {
+			for(int i = num2; i <= num1; i++) {
+				System.out.print(i + " ");
+			}
+		}
+		
+		else {
+			System.out.println("정수1과 정수2의 값이 같습니다.");
+		}
+		
+		
+		
 		}
 		
 		

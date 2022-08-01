@@ -277,11 +277,37 @@ public class C_Switch {
 		 * 9, 10, 11: "가을입니다."
 		 * 12, 1, 2: "겨울입니다."
 		 */
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("월(1~12)을 입력하시오: ");
+		
+		int month = sc.nextInt();
+		
+		sc.nextLine();
+		
+			switch(month) {
+			case 3 :
+			case 4 : 
+			case 5 : System.out.println("봄입니다."); break;
+			case 6 :
+			case 7 :
+			case 8 : System.out.println("여름입니다."); break;
+			case 9 :
+			case 10 :
+			case 11 : System.out.println("가을입니다."); break;
+			case 12 :
+			case 2 : 
+			case 1 : System.out.println("겨울입니다."); break;
+			default : System.out.println("잘못 입력하셨습니다."); return;
+				
+			}
+		
+		}
 	}
 
 
 			
 
-	}
+
 	
 	

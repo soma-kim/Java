@@ -51,6 +51,8 @@ public class ConditionRun {
 		
 		// b.method4();
 		
+		// b.method5();
+		
 		C_Switch c = new C_Switch();
 		
 		// c.method1();
@@ -61,7 +63,9 @@ public class ConditionRun {
 		
 		// c.method4();
 		
-		c.method5();
+		// c.method5();
+		
+		c.method6();
 		
 		
 		

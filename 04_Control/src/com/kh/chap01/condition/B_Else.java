@@ -249,6 +249,20 @@ public class B_Else {
 		/* 사용자로부터 이름을 키보드로 입력 받아 본인과 일치할 경우 "본인입니다. 어서오세요."
 		 * 아닐 경우 "일치하지 않습니다. 돌아가세요" 출력
 		 */
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("이름을 입력하세요: ");
+		
+		String name = sc.nextLine();
+		
+		if(name.equals("김수빈")) {
+			
+			System.out.println("본인입니다. 어서오세요.");
+			
+		}
+		else {
+			System.out.println("본인이 아닙니다. 돌아가 주세요.");
+		}
 	}
 
 
