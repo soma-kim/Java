@@ -53,9 +53,18 @@ public class ConditionRun {
 		
 		C_Switch c = new C_Switch();
 		
-		//c.method1();
+		// c.method1();
 		
-		c.method2();
+		// c.method2();
+		
+		// c.method3();
+		
+		// c.method4();
+		
+		c.method5();
+		
+		
+		
 		
 				
 	}
