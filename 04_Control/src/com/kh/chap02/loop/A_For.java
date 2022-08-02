@@ -512,6 +512,37 @@ public class A_For {
 		
 		}
 		
+		// 실습 문제
+		public void method18() {
+			
+			/*
+			 * 사용자로부터 영문 문자열을 입력받아
+			 * 첫글자부터 마지막 글자까지 하나씩 모두 출력해 보세요
+			 * 
+			 * 실행 예시
+			 * 영문 문자열을 입력하세요: apple
+			 * 
+			 * 0번째 글자: a
+			 * 1번째 글자: p
+			 * 2번째 글자: p
+			 * 3번째 글자: l
+			 * 4번째 글자: e
+			 * 
+			 */
+			
+			// 문자열의 길이를 알아내는 메소드: 총 몇 개의 문자로 이루어진 문자열인지 알려 줌
+			// [ 표현법 ] 문자열.length()
+			
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.print("영문 문자열을 입력하세요: ");
+			String word = sc.nextLine();
+			
+			for(int i = 0; i < word.length(); i++) {
+				System.out.printf("%d번째 글자: %s \n", i, word.charAt(i));
+			}
+		}
+		
 		
 	}
 
