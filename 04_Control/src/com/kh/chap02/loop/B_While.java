@@ -45,7 +45,7 @@ public class B_While {
 		
 		while(i >= 1) {
 			
-			System.out.print(i-- + " "); // --i일 경우는 4, 3, 2, 1, 0으로 출력 
+			System.out.print(i-- + " "); // 5, 4, 3, 2, 1 출력 / --i일 경우는 4, 3, 2, 1, 0으로 출력 
 			
 			//i--;
 		}
