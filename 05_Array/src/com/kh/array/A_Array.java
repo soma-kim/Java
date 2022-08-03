@@ -376,7 +376,7 @@ public class A_Array {
 		double sum = 0.0;
 		for(int i = 0; i < heights.length; i++) {
 			
-			System.out.printf("사용자 %d의 키는 %f입니다 \n" + (i+1), heights[i]);
+			System.out.printf("사용자 %d의 키는 %f입니다 \n", (i+1), heights[i]);
 
 			sum += heights[i];
 
@@ -465,6 +465,36 @@ public class A_Array {
 		System.out.println(arr3 == arr); // false
 		// => 주소값 간의 동등 비교이기 때문에 false가 나옴!!
 		// (String 과 마찬가지)
+		
+	}
+	
+	public void method10() {
+		
+		/*
+		 * 실습 문제
+		 * 좋아하는 과일의 개수를 입력받아
+		 * 그만큼 반복을 돌리면서 과일명을 입력받기 => 입력받을 때마다 문자열 배열에 담고 출력
+		 */
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("좋아하는 과일의 개수를 입력하세요: ");
+		int num = sc.nextInt();
+		
+		sc.nextLine();
+		
+
+		
+		for(int i = 0; i < num; i++) {
+			System.out.printf("좋아하는 %d번째 과일명을 입력하세요: \n", i+1);
+			String[] fruits = new String[i];
+
+		}
+		
+		// fruits를 위 for문 안에서 선언해 가지고.. 여기서는 fruits를 못 씀... 어카지
+		for(int i = 0; i < num; i++) {
+			// System.out.printf("사용자가 좋아하는 과일 %d의 이름은 %s입니다.\n", i+1, fruits[i]);
+		}
 		
 	}
 	
