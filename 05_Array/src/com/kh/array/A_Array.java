@@ -1,5 +1,6 @@
 package com.kh.array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class A_Array {
@@ -508,20 +509,24 @@ public class A_Array {
 		 * 1 ~ 45까지의 임의의 수를 "중복 없이" 6개 발생시켜 각 배열에 담으시면 됩니다
 		 */
 		
-		int[] num = new int[6]; // [0], [1], [2], [3], [4], [5]
+		int[] lotto = new int[6]; // [0], [1], [2], [3], [4], [5]
 		
-		for(int i = 0; i < num.length; i++) {
+		for(int i = 0; i < lotto.length; i++) {
 			
-			num[i] = (int)(Math.random() * 45) + 1;
+			lotto[i] = (int)(Math.random() * 45) + 1;
+			
+			for(int j = 0; j < i; j++) {
+				
+				if(lotto[i] == lotto[j]) {
+					i--;
+				}
+					break;
 				
 			}
-			
-		
-		for(int i = 0; i < num.length; i++) {
 				
-			System.out.println("로또 번호: " + num[i]);
-
-		}
+			}
+		
+		System.out.println("로또 번호는 " + Arrays.toString(lotto) + " 입니다.");
 		
 	}
 			
