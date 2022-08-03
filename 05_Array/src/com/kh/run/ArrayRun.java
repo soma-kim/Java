@@ -29,6 +29,8 @@ public class ArrayRun {
 		
 		// a.method10();
 		
+		a.method11();
+		
 		B_ArrayCopy b = new B_ArrayCopy();
 		
 		// b.method1();

@@ -51,8 +51,8 @@ public class B_ArrayCopy {
 		// => 원본 배열도 함께 값이 변경된 것을 알 수 있다.
 		// 얕은 복사: 배열의 주소값이 복사되어 원본과 복사본이 같은 상태
 		
-		System.out.println("\n원본 배열의 해시코드값: " + origin.hashCode());
-		System.out.println("복사본 배열의 해시코드값: " + copy.hashCode());
+		System.out.println("\n원본 배열의 해시코드값: " + origin.hashCode()); // 원본 배열의 해시코드값과
+		System.out.println("복사본 배열의 해시코드값: " + copy.hashCode()); // 복사본 배열의 해시코드값이 같음
 		
 	}
 	
@@ -195,7 +195,7 @@ public class B_ArrayCopy {
 		
 		System.out.println(Arrays.toString(copy));
 		// Arrays.toString(출력하고자하는배열명);
-		// => 앞과 뒤에 각각 [, ] , 내용물 사이에는 쉼표로 연이어져서 한 개의 문자열로 내보내 주는 메소드
+		// => 앞과 뒤에 각각 '['과 ']'을 붙이고, 내용물 사이에는 쉼표(,)로 연이어져서 한 개의 문자열로 내보내 주는 메소드
 		
 		System.out.println("원본 배열의 해시코드값: " + origin.hashCode());
 		System.out.println("복사본 배열의 해시코드값: " + copy.hashCode());

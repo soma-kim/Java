@@ -16,7 +16,7 @@ public class A_Array {
 	 * 								  // 문자열의 크기가 5라면, 마지막 인덱스 = 4 (0, 1, 2, 3, 4)
 	 * 								  // 배열의 크기가 3이라면, 마지막 인덱스 = 2 (0, 1, 2)
 	 * 								  // 배열의 크기가 7이라면, 마지막 인덱스 = 6 (0, 1, 2, 3, 4, 5, 6)
-	 * 								  // 항상 크기 = n, 마지막 인덱스 = n - 1 공식을 외워 두자!
+	 * 								  // 항상! 배열의 크기 = n, 마지막 인덱스 = n - 1 공식을 외워 두자!
 	 * 								  //  => for 문에서 반복 횟수를 지정하는 가장 기본적인 방법
 	 * 								  //  int i = 0; i < 횟수; i++
 	 * 
@@ -134,7 +134,7 @@ public class A_Array {
 		
 		int i = 10;
 		
-		int[] iArr = new int[5];
+		int[] iArr = new int[5]; // [0], [1], [2], [3], [4]
 		
 		System.out.println("i: " + i);
 		System.out.println("iArr: " + iArr);
@@ -177,7 +177,7 @@ public class A_Array {
 		
 		/* 내가 배열의 크기를 알고 있으므로 조건식을 이렇게 써도 되긴 하지만
 		 * 이렇게 쓰면 나중에 코드를 바꾸거나 할 때 티가 안 남!
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 3; i++) { // i < 3 으로 설정해 두면 나중에 티가 안 남...
 			
 			System.out.println(iArr[i]);
 		}
@@ -354,7 +354,7 @@ public class A_Array {
 	
 	public void method7() {
 		
-		// 3명의 사용자에게 매번 키의 정보를 double로 입력받고 배열에 담아 두고
+		// 3명의 사용자에게 매번 키의 정보를 double로 입력받아 배열에 담아 두고
 		// 3명의 키 정보를 반복문을 이용하여 출력
 		// 3명의 키 정보의 합계, 평균(총 합계 / 개수)
 		
@@ -480,23 +480,50 @@ public class A_Array {
 		
 		System.out.print("좋아하는 과일의 개수를 입력하세요: ");
 		int num = sc.nextInt();
-		
 		sc.nextLine();
 		
-
+		String[] fruits = new String[num];
 		
-		for(int i = 0; i < num; i++) {
-			System.out.printf("좋아하는 %d번째 과일명을 입력하세요: \n", i+1);
-			String[] fruits = new String[i];
+		for(int i = 0; i < fruits.length; i++) {
+			System.out.printf("좋아하는 %d번째 과일명을 입력하세요: ", i+1);
+			
+			fruits[i] = sc.nextLine();
 
 		}
 		
-		// fruits를 위 for문 안에서 선언해 가지고.. 여기서는 fruits를 못 씀... 어카지
 		for(int i = 0; i < num; i++) {
-			// System.out.printf("사용자가 좋아하는 과일 %d의 이름은 %s입니다.\n", i+1, fruits[i]);
+			
+			System.out.printf("사용자가 좋아하는 %d번째 과일의 이름은 %s입니다.\n", i+1, fruits[i]);
+
 		}
 		
 	}
 	
+	public void method11() {
+		
+		/*
+		 * 로또 생성 자동 프로그램을 만드세요
+		 * 
+		 * 힌트
+		 * 1 ~ 45까지의 임의의 수를 "중복 없이" 6개 발생시켜 각 배열에 담으시면 됩니다
+		 */
+		
+		int[] num = new int[6]; // [0], [1], [2], [3], [4], [5]
+		
+		for(int i = 0; i < num.length; i++) {
+			
+			num[i] = (int)(Math.random() * 45) + 1;
+				
+			}
+			
+		
+		for(int i = 0; i < num.length; i++) {
+				
+			System.out.println("로또 번호: " + num[i]);
+
+		}
+		
+	}
+			
 }
 	
