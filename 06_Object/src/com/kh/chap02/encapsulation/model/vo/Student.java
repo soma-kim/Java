@@ -119,5 +119,18 @@ public class Student {
 	
 	// => setter와 getter 메소드까지 만들어 주는 과정까지가 캡슐화이다!
 	
-
+	// 모든 필드값들을 하나의 문자열로 연이어서 돌려 주는 용도의 메소드
+	// => 캡슐화 과정은 아니기 때문에 필수는 아님! 있으면 편리하니까 꼭 만들자
+	
+	// 접근제한자 반환형 메소드명(매개변수) {
+	//		return 리턴값;
+	// }
+	
+	public String information() {
+		
+		// return name, age, height; // 한 번에 한 개의 값만 리턴 가능함
+		return name + " 님의 나이는" + age + "살이고, 키는 " + height + "cm입니다.";
+		// 그래서 하나의 문자열로 만든 후에 리턴!
+		
+	}
 }

@@ -54,7 +54,8 @@ public class Run {
 		System.out.println(hong.getHeight());
 		
 		// xxx님의 나이는 xx살이고, 키는 xxxcm입니다.
-		System.out.println(hong.getName() +" 님의 나이는 " + hong.getAge() + "살이고, 키는 " + hong.getHeight() + "cm입니다.");
+		// System.out.println(hong.getName() +" 님의 나이는 " + hong.getAge() + "살이고, 키는 " + hong.getHeight() + "cm입니다.");
+		System.out.println(hong.information());
 		
 		// 실습
 		// 김영희 학생의 객체를 만드세요
@@ -67,7 +68,8 @@ public class Run {
 		kim.setAge(21);
 		kim.setHeight(180.4);
 		
-		System.out.println(kim.getName() + " 님의 나이는 " + kim.getAge() + "살이고, 키는 " + kim.getHeight() + "cm입니다.");
+		//System.out.println(kim.getName() + " 님의 나이는 " + kim.getAge() + "살이고, 키는 " + kim.getHeight() + "cm입니다.");
+		System.out.println(kim.information());
 	
 
 	}
