@@ -511,21 +511,21 @@ public class A_Array {
 		
 		int[] lotto = new int[6]; // [0], [1], [2], [3], [4], [5]
 		
-		for(int i = 0; i < lotto.length; i++) {
+		for(int i = 0; i < lotto.length; i++) { // 위쪽 for문 한 번 돌고, 밑 for문 i-1만큼 반복하다가 다시 올라와서 위쪽 for문 진행됨
 			
 			lotto[i] = (int)(Math.random() * 45) + 1;
 			
-			for(int j = 0; j < i; j++) {
+			for(int j = 0; j < i; j++) { // 원활한 이해를 위해서 조건식을 j <= i-1 라고 써도 무방하나, 깔끔한 코드를 위해 j < i로 작성!
 				
 				if(lotto[i] == lotto[j]) {
 					i--;
 				}
-					break;
+					break; 
 				
 			}
 				
 			}
-		
+		//  Arrays.sort(lotto); // 오름차순 정렬하고 싶을 때 추가하면 됨!
 		System.out.println("로또 번호는 " + Arrays.toString(lotto) + " 입니다.");
 		
 	}
