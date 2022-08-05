@@ -29,6 +29,21 @@ public class MethodTest1 {
 		
 		System.out.println("매개변수와 반환값이 둘 다 없는 메소드입니다.");
 		
+		// 1부터 10까지 합계를 구해서 출력하는 기능
+		
+		int sum = 0;
+		
+		for(int i = 1; i <= 10; i++) {
+			
+			sum += i;
+		}
+		
+		
+		System.out.println("총 합계: " + sum);
+		
+		// return; // 반환형이 void라서 빈손으로 돌아간다는 의미! 뒤에 sum 적으면 오류 뜸
+				   // void 메소드일 경우에는 알게 모르게 return; 구문이 생략되어 있음
+				   // JVM이 자동으로 생성해 주는 구문 
 	}
 	
 
