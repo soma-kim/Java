@@ -25,7 +25,7 @@ public class ObjectRun {
 		*/
 		
 		/*
-		// 3. 사용자가 입력한 값들로 객채 생성
+		// 3. 사용자가 입력한 값들로 객체 생성
 		Scanner sc = new Scanner(System.in);
 		
 		
