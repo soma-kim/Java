@@ -4,11 +4,11 @@ public class SmartPhone {
 	
 	// 필드부
 	
-		private String brand;
-		private String pCode;
-		private String pName;
-		private int price;
-		private String mobileAgency;
+		private String brand; // 브랜드명
+		private String pCode; // 상품코드
+		private String pName; // 상품명
+		private int price; // 가격
+		private String mobileAgency; // 통신사 정보
 		
 		// 생성자부
 		
@@ -67,7 +67,8 @@ public class SmartPhone {
 		}
 		
 		public String information() {
-			return "brand: " + brand + ", pCode: " + pCode + ", pName: " + pName + ", price: " + price + ", mobileAgency: " + mobileAgency;
+			return "brand: " + brand + ", pCode: " + pCode + ", pName: " + pName
+					+ ", price: " + price + ", mobileAgency: " + mobileAgency;
 		}
 
 }

@@ -4,10 +4,10 @@ public class Desktop {
 	
 	// 필드부
 	
-	private String brand;
-	private String pCode;
-	private String pName;
-	private int price;
+	private String brand; // 브랜드명
+	private String pCode; // 상품 코드
+	private String pName; // 상품명
+	private int price; // 가격
 	private boolean allInOne;
 	
 	// 생성자부
@@ -43,7 +43,7 @@ public class Desktop {
 	}
 	
 	public void setAllInOne(boolean allInOne) {
-		this.allInOne = allInOne;
+		this.allInOne = allInOne; // 일치 여부
 	}
 	
 	public String getBrand() {
@@ -62,12 +62,20 @@ public class Desktop {
 		return price;
 	}
 	
-	public boolean getAllInOne() {
+	/* public boolean getAllInOne() {
+		return allInOne;
+	}
+	
+	* boolean 타입의 필드에 대한 getter 메소드명은 관례상 isXXX()으로 짓는다
+	*/
+	
+	public boolean isAllInOne() {
 		return allInOne;
 	}
 	
 	public String information() {
-		return "brand: " + brand + ", pCode: " + pCode + ", pName: " + pName + ", price: " + price + ", allInOne: " + allInOne;
+		return "brand: " + brand + ", pCode: " + pCode + ", pName: " + pName
+				+ ", price: " + price + ", allInOne: " + allInOne;
 	}
 
 }

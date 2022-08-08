@@ -2,13 +2,13 @@ package com.kh.chap01.beforeVSafter.before.model.vo;
 
 public class Tv {
 	
-	// 필드부
+		// 필드부
 	
-		private String brand;
-		private String pCode;
-		private String pName;
-		private int price;
-		private int inch;
+		private String brand; // 브랜드명
+		private String pCode; // 상품코드
+		private String pName; // 상품명
+		private int price; // 가격
+		private int inch; // 인치
 		
 		// 생성자부
 		
