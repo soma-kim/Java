@@ -64,5 +64,12 @@ public class Desktop extends Product {
 	public void setallInOne(boolean allInOne) {
 		this.allInOne = allInOne;
 	}
+	
+	// 오버라이딩 작업(information 메소드)
+	public String information() {
+		// return "brand: " + super.getBrand() + ", pCode: " + super.getpCode() + ", pName: " + super.getpName()
+		// + ", price: "  + super.getPrice() + ",allInOne: " + allInOne; 
+		return super.information() + ", allInOne: " + allInOne;
+	}
 
 }

@@ -23,5 +23,9 @@ public class Tv extends Product {
 		public void inch(int inch) {
 			this.inch = inch;
 		}
+		
+		public String information() {
+			return super.information() + ", inch: " + inch;
+		}
 
 }

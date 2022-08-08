@@ -24,6 +24,10 @@ public class SmartPhone extends Product {
 		public void setmobileAgency(String mobileAgency) {
 			this.mobileAgency = mobileAgency;
 		}
+		
+		public String information() {
+			return super.information() + ", mobileAgency: " + mobileAgency;
+		}
 
 
 }
