@@ -28,5 +28,9 @@ public class Car extends Vehicle {
 	public String information() {
 		return super.information() + ", tire: " + tire;
 	}
+	
+	public void howToMove() {
+		System.out.println("바퀴를 굴려가며 움직인다.");
+	}
 
 }
