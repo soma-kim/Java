@@ -34,7 +34,7 @@ public class Run {
 		int count = 0;
 		
 		while(true) {
-			for(int i = 0; i <= arr2.length; i++) {
+			
 				System.out.print("사원 이름: ");
 				String name = sc.nextLine();
 				
@@ -57,25 +57,43 @@ public class Run {
 				System.out.print("사원 부서: ");
 				String dept = sc.nextLine();
 				
-				arr2[i] = new Employee(name, age, height, weight, salary, dept);
+				arr2[count] = new Employee(name, age, height, weight, salary, dept);
 				
 				System.out.print("계속 추가하시겠습니까?(Y/N): ");
+				
+				count++;
+				
 				char answer = sc.nextLine().charAt(0);
 
-					if (answer == 'Y' || answer == 'y') {
-						count++;
-					}
+				if (answer == 'Y' || answer == 'y') {
+					
+					continue;
+				}
 
-				else {
-					for(int j = 0; j <= count; j++) {
-						System.out.println(arr2[j].toString());	
+				else if (answer == 'N' || answer == 'n'){
+					for(int j = 0; j < count; j++) {
+						System.out.println(arr2[j].toString());
+												
 					}
-					
 					return;
+
+				}
+				else {
+					System.out.println("다시 입력하세요");
 					
-					}
-			}
+					continue;
+				}
+				
+				
+				
+				
+			
+			
 		}
+		
+		
+		
 	}
+	
 
 }
