@@ -35,6 +35,8 @@ public class Run {
 		
 		while(true) {
 			
+				System.out.print(count+1 + "번째 직원입니다\n");
+			
 				System.out.print("사원 이름: ");
 				String name = sc.nextLine();
 				
@@ -59,9 +61,9 @@ public class Run {
 				
 				arr2[count] = new Employee(name, age, height, weight, salary, dept);
 				
-				System.out.print("계속 추가하시겠습니까?(Y/N): ");
-				
 				count++;
+		
+				System.out.print("계속 추가하시겠습니까?(Y/N): ");
 				
 				char answer = sc.nextLine().charAt(0);
 
@@ -84,14 +86,8 @@ public class Run {
 					continue;
 				}
 				
-				
-				
-				
-			
-			
-		}
-		
-		
+		}	
+
 		
 	}
 	
