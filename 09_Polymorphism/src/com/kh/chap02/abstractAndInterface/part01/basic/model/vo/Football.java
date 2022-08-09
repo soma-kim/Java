@@ -19,7 +19,7 @@ public class Football extends Sports {
 	// rule 메소드 오버라이딩
 	
 	public void rule() {
-		System.out.println("풋볼이니까 공을 손으로 잡으면 안 되겠...죠?");
+		System.out.println("핸들링 하지 마세요");
 	}
 
 }

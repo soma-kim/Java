@@ -22,9 +22,9 @@ public class PolyRun {
 		// 1. 부모 타입의 참조변수(주소값이 들어가는 stack영역의 상자)로 부모 객체(heap 영역의 알맹이)를 다루는 경우
 		System.out.println("1. 부모 타입의 참조변수로 부모 객체를 다루는 경우");
 		Parent p1 = new Parent();
-		//  Parent 주소갑 타입 = heap 영역 실물 타입
+		//  Parent 주소값 타입 = heap 영역 실물 타입
 		p1.printParent();
-		// p1.printChild1();
+		// p1.printChild1(); // 불가능
 		// => p1 참조 변수로 Parent 객체에만 접근 가능
 		
 		// 2. 자식 타입의 참조변수로 자식 객체를 다루는 경우
