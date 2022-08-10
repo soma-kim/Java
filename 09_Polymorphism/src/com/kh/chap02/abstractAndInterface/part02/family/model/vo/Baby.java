@@ -1,6 +1,6 @@
 package com.kh.chap02.abstractAndInterface.part02.family.model.vo;
-
-public class Baby extends Person {
+				// 확장한다 		// 구현한다. 라는 뜻 
+public class Baby extends Person implements Basic {
 	
 	// 필드부
 	// 추가 필드 없음

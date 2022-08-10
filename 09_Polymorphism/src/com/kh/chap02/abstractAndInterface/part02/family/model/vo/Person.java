@@ -1,6 +1,6 @@
 package com.kh.chap02.abstractAndInterface.part02.family.model.vo;
 
-public class Person {
+public abstract class Person {
 	
 	// 필드부
 	private String name; // 이름
@@ -51,18 +51,22 @@ public class Person {
 	}
 	
 	// 사람의 행위를 메소드로 표현
-	public void eat() {
-		System.out.println("밥을 먹는다.");
-
-	}
+		// 일반 메소드 버전
+		/*
+		public void eat() {
+			System.out.println("밥을 먹는다.");
 	
-	public void sleep() {
-		System.out.println("잠을 잔다.");
-	}
+		}
+		
+		public void sleep() {
+			System.out.println("잠을 잔다.");
+		}
+		*/
 	
-	
-	
-	
-	
+	/*
+	// 추상 메소드 버전 (abstract, 몸통부 x) => 미완성된 상태 = > 상속받는 측에서 완성시켜 줘야 함(오버라이딩 활용)
+	public abstract void eat();
+	public abstract void sleep();
+	*/
 
 }

@@ -28,7 +28,7 @@ public class Dog extends Animal {
 	}
 	
 	public void speak() {
-		System.out.println(super.toString() + "몸무게는 " + weight + "입니다.");
+		System.out.println(super.toString() + "몸무게는 " + weight + "kg입니다.");
 	}
 
 }
