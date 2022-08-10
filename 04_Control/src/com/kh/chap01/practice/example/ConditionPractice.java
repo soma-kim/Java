@@ -262,46 +262,56 @@ public class ConditionPractice {
 		
 	}
 	
+	// 스터디 과제(8/11)
 	public void practice9() {
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in); // 키보드 입력을 받음
 		
-		System.out.print("중간 고사 점수: ");
-		double score1 = sc.nextDouble();
-		sc.nextLine();
+		System.out.print("중간 고사 점수: "); // 중간 고사 점수에 대한
+		double score1 = sc.nextDouble();  // 키보드로 입력받은 double형 입력값을 변수에 넣음(밑에서 0.2, 0.3 등을 곱해 주기 때문에 int가 아닌 double로 받았음)
+		sc.nextLine();					  // 버퍼 비우기
 		
-		System.out.print("기말 고사 점수: ");
-		double score2 = sc.nextDouble();
-		sc.nextLine();
+		System.out.print("기말 고사 점수: "); // 기말 고사 점수에 대한
+		double score2 = sc.nextDouble();  // 키보드로 입력받은 double형 입력값을 변수에 넣음
+		sc.nextLine();					  // 버퍼 비우기
 		
-		System.out.print("과제 점수: ");
-		double score3 = sc.nextDouble();
-		sc.nextLine();
+		System.out.print("과제 점수: ");     // 과제 점수에 대한
+		double score3 = sc.nextDouble();  // 키보드로 입력받은 double형 입력값을 변수에 넣음
+		sc.nextLine();					  // 버퍼 비우기
 		
-		System.out.print("출석 회수: ");
-		double score4 = sc.nextDouble();
+		System.out.print("출석 회수: ");     // 출석 횟수에 대한
+		double score4 = sc.nextDouble();  // 키보드로 입력받은 double형 입력값을 변수에 넣음
+		sc.nextLine();                    // 버퍼 비우기
 		
 		System.out.println("==========결과==========");
 		
 		double result = (score1 * 0.2) + (score2 * 0.3)
-						+ (score3 * 0.3) + score4;
+						+ (score3 * 0.3) + score4;  // 점수 100%에 대해 중간 20%, 기말 30%, 과제 30%를 퍼센트 곱해 주고,
+													// 출석은 20회가 20%이기 때문에 score4 그대로 적용하여 100%에 대한 변수를 새로 만듦 
 		
-		if(score4 < (20*0.7)) {
-			System.out.printf("FAIL [출석 횟수 부족] (%d/20)", (int)(score4));
-			System.out.println();
+		// 출석 미달일 때, 점수 미달일 때, 출석과 점수 미달일 때 불합격
+		// 위의 상황이 아닐 때 합격이므로
+		// 불합격 상황을 먼저 가정하고 합격 상황을 마지막에 기술
+		
+		if(score4 < (20*0.7)) { // 출석 미달일 때
+			System.out.printf("FAIL [출석 횟수 부족] (%d/20)", (int)(score4)); // 결과문에서는 정수형으로 출력되어 있어 int형 강제 변환
+			System.out.println(); // 줄바꿈
+			// 출석, 점수 미달일 때 [출석 횟수 부족], [점수 미달]을 함께 출력해야 하기 때문에 여기서는 return 쓰지 않음
 		} 
 		
-		if(result < 70) {
-			System.out.println("FAIL [점수 미달] (총점 " + result + ")");
-			return;
+		if(result < 70) { // 점수 미달일 때
+			System.out.println("FAIL [점수 미달] (총점 " + result + ")"); // 100%로 환산한 값이 출력되어 있어 result를 씀
+			return; // 점수 미달이라면 합격 상황의 코드는 볼 필요 없기 때문에 return으로 진행 종료시킴
 		}
 		
-		if(result >= 70 && score4 >= (20*0.7)) {
+		if(result >= 70 && score4 >= (20*0.7)) { // 합격 조건
 			System.out.println("중간 고사 점수(20): " + score1 * 0.2);
 			System.out.println("기말 고사 점수(30): " + score2 * 0.3);
 			System.out.println("과제 점수(30): " + score3 * 0.3);
 			System.out.println("출석 점수(20): " + score4);
 			System.out.println("총점: " + result);
 			System.out.println("PASS");	
+			// 해당 조건문을 else로 만들 수도 있었으나 사용자가 위의 코드 상황과 다른 입력을 할 경우가... 있을 수도 있을 것 같아서
+			// if로 조건문 걸었음
 		}
 		
 	}

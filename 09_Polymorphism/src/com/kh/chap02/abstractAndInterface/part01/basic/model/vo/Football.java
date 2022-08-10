@@ -16,10 +16,9 @@ public class Football extends Sports {
 	}
 	
 	// 메소드부
-	// rule 메소드 오버라이딩
-	
+	@Override
 	public void rule() {
-		System.out.println("핸들링 하지 마세요");
+		System.out.println("손이 아닌 발로 공을 차야 함");
 	}
 
 }
