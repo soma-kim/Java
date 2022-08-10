@@ -290,6 +290,7 @@ Scanner sc = new Scanner(System.in);
 			if(op.equals("/") && num2 == 0) {
 				System.out.println("0으로 나눌 수 없습니다. 다시 입력해 주세요.");
 				method12();
+				return; // 메소드 재호출 후 프로그램 종료
 			}
 			
 			// num1, num2 연산을 위한 변수 생성
@@ -315,6 +316,7 @@ Scanner sc = new Scanner(System.in);
 			default : // 제시되지 않은 연산자 입력 시 출력문 뱉고 처음으로 돌아가 연산자부터 다시 입력 (== 메소드 재시작)
 				System.out.println("없는 연산자입니다. 다시 입력해 주세요.");
 				method12();
+				return; // 메소드 재호출 후 과정이 끝나면 프로그램 종료
 			}
 		
 			System.out.printf("%d %s %d = %d\n", num1, op, num2, result); // 출력문 형
