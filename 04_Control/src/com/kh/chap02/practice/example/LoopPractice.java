@@ -266,7 +266,7 @@ Scanner sc = new Scanner(System.in);
 	public void method12() {
 		Scanner sc = new Scanner(System.in);
 		
-		while (true) { // 무한 반복을 위해 true 조건을 걸고 while문 적
+		while (true) { // 무한 반복을 위해 true 조건을 걸고 while문 적음
 		
 			System.out.print("연산자(+, -, *, /, %): ");
 			String op = sc.nextLine(); // 연산자 String형으로 입력받기(요구사항)
@@ -319,7 +319,7 @@ Scanner sc = new Scanner(System.in);
 				return; // 메소드 재호출 후 과정이 끝나면 프로그램 종료
 			}
 		
-			System.out.printf("%d %s %d = %d\n", num1, op, num2, result); // 출력문 형
+			System.out.printf("%d %s %d = %d\n", num1, op, num2, result); // 출력문 형식
 			
 		}
 		

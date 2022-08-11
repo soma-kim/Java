@@ -19,9 +19,11 @@ public class StringRun {
 		
 		// b.method1();
 		
+		b.method2();
+		
 		C_StringTokenizerTest c = new C_StringTokenizerTest();
 		
-		c.method();
+		// c.method();
 	}
 
 }

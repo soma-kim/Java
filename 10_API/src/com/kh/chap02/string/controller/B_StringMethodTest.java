@@ -2,6 +2,7 @@ package com.kh.chap02.string.controller;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class B_StringMethodTest {
 	
@@ -40,7 +41,7 @@ public class B_StringMethodTest {
 		System.out.println("str3: " + str3); // str3: Hecc worcd
 		
 		// 6. 문자열.trim(): 반환할 Stirng형
-		// => 문자열의 앞, 뒤 공백을 모두 제거한 문자열을 티런
+		// => 문자열의 앞, 뒤 공백을 모두 제거한 문자열을 리턴
 		String str4 = "      JA         VA       ";
 		System.out.println("trim(): " + str4.trim()); // trim(): JA         VA, 문자 사이 중간 공백은 없어지지 않음!
 		
@@ -110,10 +111,41 @@ public class B_StringMethodTest {
 		 */
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("문장을 입력하세요: ");
+		System.out.print("문장을 입력하세요: ");
 		String sen = sc.nextLine();
 		
 		// 단어들을 배열에 담아 놓는 게 편하다?
+		String abuse = "신발끈, 개나리, 수박씨, 호루라기, 시베리아, 십장생, 조카, 주옥, 쌍쌍바, 십자수, 식빵"; // 11개
+		String[] arr = abuse.split(","); // 현재 arr[10] 배열에 11개의 욕이 담겨 있음
+		
+		/* 
+		 * for문을 이용해서 욕설 나열하는 방법
+			for(int i = 0; i < arr.length; i++) {
+				System.out.println(arr[i]);
+			}
+		*/
+		
+		int count = 0; // 그냥 charAt에 대한 숫자를 0부터 시작하기 위해서 변수 초기화 해 놓음
+		
+		for(int i = 0; i < arr.length; i++) { // arr[0] ~ arr.lenght(== 11)까지 차례대로 올라갈 거야
+			System.out.println(arr[i].charAt(count));
+			for(int j = 0; j < sen.length(); j++) { // arr[0] 배열에서 sen 길이까지 모두 char형으로 받아서 확인할 거야
+				System.out.println(arr[i].charAt(j));
+			}
+		}
+		
+		// if() // 뽑은 charAt의 글자 중에 sen에 해당하는 문자가 있다면 변환해라...
+		
+		/*
+		for(int i = 0; i < arr.length; i++) {
+			if(sen.equals(arr[i])) { // sen의 앞뒤로 같아야 하는데... ㅠ
+				System.out.println(sen.replace(sen, '*')); // String sen을 char로 어케 바꾸지
+				
+				
+			}
+		}
+		*/
+		
 		
 	
 		}
