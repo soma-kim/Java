@@ -115,8 +115,41 @@ public class B_StringMethodTest {
 		String sen = sc.nextLine();
 		
 		// 단어들을 배열에 담아 놓는 게 편하다?
-		String abuse = "신발끈, 개나리, 수박씨, 호루라기, 시베리아, 십장생, 조카, 주옥, 쌍쌍바, 십자수, 식빵"; // 11개
+		String abuse = "신발끈,개나리,수박씨,호루라기,시베리아,십장생,조카,주옥,쌍쌍바,십자수,식빵"; // 11개
 		String[] arr = abuse.split(","); // 현재 arr[10] 배열에 11개의 욕이 담겨 있음
+		
+		// arr 배열에 담긴 욕의 수만큼 for문을 돌 거
+		for( String sAbuse : arr ) {	//sAbuse 처음에는 신발끈이, 두번째는 개나리가,세번째는 수박씨가 담길 거
+			int abuseLth = sAbuse.length();	// 욕의 글자 수를 뽑는다 (ex 신발끈: 3)
+			
+			String trans = "";
+			
+			// 욕의 글자 수만큼 *이 만들어져야 한다 (ex 신발끈 -> ***, 시베리아 -> ****)
+			for( int i = 0 ; i < abuseLth ; i ++ ) {
+				trans += "*";
+			}
+			
+			// 내가 입력한 문장에서 욕이 있다면 별로 바꿀게!
+			sen = sen.replace(sAbuse, trans);
+		}
+		
+		System.out.println(sen);
+		
+//		for(int i = 0; i < arr.length; i++) {
+//		
+//		int abuseLth = arr[i].length();		
+//		String trans = "";
+//		
+//		for( int j = 0 ; j < abuseLth ; j ++ ) {
+//			trans += "*";
+//		}
+//				
+//		sen = sen.replace(arr[i], trans);
+//		
+//		
+//	}
+	
+		
 		
 		/* 
 		 * for문을 이용해서 욕설 나열하는 방법
@@ -124,7 +157,7 @@ public class B_StringMethodTest {
 				System.out.println(arr[i]);
 			}
 		*/
-		
+		/*
 		int count = 0; // 그냥 charAt에 대한 숫자를 0부터 시작하기 위해서 변수 초기화 해 놓음
 		
 		for(int i = 0; i < arr.length; i++) { // arr[0] ~ arr.lenght(== 11)까지 차례대로 올라갈 거야
@@ -133,7 +166,7 @@ public class B_StringMethodTest {
 				System.out.println(arr[i].charAt(j));
 			}
 		}
-		
+		*/
 		// if() // 뽑은 charAt의 글자 중에 sen에 해당하는 문자가 있다면 변환해라...
 		
 		/*
@@ -147,9 +180,5 @@ public class B_StringMethodTest {
 		*/
 		
 		
-	
-		}
-		
-
-
+	}
 }
