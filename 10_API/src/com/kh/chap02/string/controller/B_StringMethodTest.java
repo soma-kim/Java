@@ -58,7 +58,7 @@ public class B_StringMethodTest {
 		// 활용 예시
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("종료하시겠습니까? (y/n): ");
+		System.out.print("종료하시겠습니까? (y/n): ");
 		// char answer = sc.nextLine().charAt(0); // Y, y, N, n
 		char answer = sc.nextLine().toUpperCase().charAt(0); // Y, N으로 경우가 좁혀짐!
 		// => 메소드를 연이어서 호출(메소드체이닝)
