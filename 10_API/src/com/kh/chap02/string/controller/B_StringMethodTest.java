@@ -1,5 +1,6 @@
 package com.kh.chap02.string.controller;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class B_StringMethodTest {
@@ -55,6 +56,7 @@ public class B_StringMethodTest {
 		// => 문자열을 모두 다 소문자로 변경 후 문자열 리턴
 		System.out.println("lower: " + str1.toLowerCase()); // lower: hell world
 		
+		/*
 		// 활용 예시
 		Scanner sc = new Scanner(System.in);
 		
@@ -68,6 +70,54 @@ public class B_StringMethodTest {
 		} else {
 			System.out.println("프로그램을 종료하지 않습니다.");
 		}
+		*/
+		
+		
+		// 문자열 => char[]
+		/*
+		char[] arr = new char[str1.length()];
+		
+		for(int i = 0; i < arr.lengh; i++) {
+			arr[i] = str1.charAt(i);
+		}
+		*/
+		
+		// 8. 문자열.toCharArray(): 결과값 char[]형
+		// => 문자열의 각 문자들을 char[] 배열로 옮겨 담은 후 그 배열을 리턴
+		char[] arr = str1.toCharArray();
+		System.out.println(Arrays.toString(arr)); // [H, e, l, l,  , w, o, r, l, d]
+		
+		
+		// char[] => 문자열
+		char[] arr2 = {'a', 'p', 'p', 'l', 'e'};
+		
+		// 9. static valueOf(char[] data): 변환값 String형
+		// => 전달된 char[] 배열에 담긴 문자들을 하나의 문자열로 연이어서 리턴
+		System.out.println(String.valueOf(arr2)); // apple
+
 	}
+	// 실습 문제
+	public void method2() {
+		
+		/*
+		 * 욕설 필터링 프로그램
+		 * - 사용자에게 문장을 하나 입력받습니다
+		 * - 다음 제시되는 단어에 해당할 경우 * 으로 대체해서 출력하도록 구현해 보세요
+		 * - 신발끈, 개나리, 수박씨, 호루라기, 시베리아, 십장생, 조카, 주옥, 쌍쌍바, 십자수, 식빵
+		 * 
+		 * ex) 이런 신발끈 같은 개나리 호루라기야!!!
+		 * => 이런 *** 같은 *** ****야!!!
+		 */
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("문장을 입력하세요: ");
+		String sen = sc.nextLine();
+		
+		// 단어들을 배열에 담아 놓는 게 편하다?
+		
+	
+		}
+		
+
 
 }
