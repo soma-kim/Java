@@ -81,7 +81,7 @@ public class PolyRun {
 		((Child2)arr[1]).printChild2();
 		((Child1)arr[2]).printChild1();
 		((Child2)arr[3]).printChild2();
-		// 자식타입객체로써 사용하고자 할 경우에는 강제형변환으로 원산 복구 후에 사용 가능 => DownCasting
+		// 자식타입객체로써 사용하고자 할 경우에는 강제형변환으로 원상 복구 후에 사용 가능 => DownCasting
 		
 		// ((Child1)arr[3]).printChild1();
 		// => Child2 타입인 arr[3]을 Child1으로 형 변환 하려고 해서 오류가 발생함! 
@@ -102,7 +102,7 @@ public class PolyRun {
 			// 부모객체명 instanceof 부모클래스명 == true
 			// 자식객체명 instanceof 부모클래스명 == true (상속을 받았으니 부모님 거도 내 거)
 			// 부모객체명 instanceof 자식클래스명 == false (부모객체는 자식객체의 내용물에 접근 불가)
-			// 자식객체면 instanceof 자식클래스명 == true
+			// 자식객체명 instanceof 자식클래스명 == true
 			
 			/*
 			if(arr[i] instanceof Child1) {

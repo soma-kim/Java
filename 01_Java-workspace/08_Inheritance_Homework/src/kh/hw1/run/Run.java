@@ -66,7 +66,7 @@ public class Run {
 				System.out.print("계속 추가하시겠습니까?(Y/N): ");
 				
 				char answer = sc.nextLine().charAt(0);
-
+				
 				if (answer == 'Y' || answer == 'y') {
 					
 					continue;
@@ -82,10 +82,9 @@ public class Run {
 				}
 				else {
 					System.out.println("다시 입력하세요");
-					
-					continue;
+					// 어떻게 해야 여기서 66번 줄을 호출할 수 있는지?
 				}
-				
+			
 		}	
 
 		
