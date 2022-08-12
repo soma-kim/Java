@@ -113,6 +113,7 @@ public class B_StringMethodTest {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("문장을 입력하세요: ");
 		String sen = sc.nextLine();
+		// sc.next(); // 를 쓰면 공백 전까지만 출력됨!! "가 나다라"를 입력할 시 "가"만 출력됨!
 		
 		// 단어들을 배열에 담아 놓는 게 편하다?
 		String abuse = "신발끈,개나리,수박씨,호루라기,시베리아,십장생,조카,주옥,쌍쌍바,십자수,식빵"; // 11개
@@ -121,8 +122,9 @@ public class B_StringMethodTest {
 		
 		// 문자열 배열의 경우 for문을 이런 식으로도 쓸 수 있음 (향상된 for문, foreach문)
 		// for(값을받아줄수있는변수선언문 : 순차적으로접근할배열또는컬렉션명)
+		// <향상된 for문>
 		
-		// arr 배열에 담긴 욕의 수만큼 for문을 돌 거
+		// arr 배열에 담긴 욕의 수만큼 for문을 돌 거 
 		for( String sAbuse : arr ) {	//sAbuse 처음에는 신발끈이, 두번째는 개나리가,세번째는 수박씨가 담길 거
 			int abuseLth = sAbuse.length();	// 욕의 글자 수를 뽑는다 (ex 신발끈: 3)
 			
@@ -139,6 +141,8 @@ public class B_StringMethodTest {
 		
 		System.out.println(sen);
 		
+		
+//		<일반 for문>
 //		for(int i = 0; i < arr.length; i++) {
 //		
 //		int abuseLth = arr[i].length();		
@@ -150,8 +154,49 @@ public class B_StringMethodTest {
 //				
 //		sen = sen.replace(arr[i], trans);
 //		
+//		========================================================
+//		
+//		<강사님 풀이>
+//		// 필터링 배열
+//		String[] filter = {"신발끈", "개나리", "수박씨", "호루라기", "시베리아", "십장생", "조카", "주옥", "쌍쌍바", "십자수", "식빵"};
+// 		// 필터링 작업
+//		for(int i = 0; i < filter.length; i++) {
+//			
+//			// 각 인덱스에 들은 필터링할 문자열 기준으로 치환할 문자열을 새로 생성
+//			int size = filter[i].length(); // 해당 글자의 글자 수를 추출
+//			String star ="";
+//			for(int j = 0, j < size; j++) {
+//				star += "*";
+//			}
+//			
+//			// filter[i] 글자를 star로 대체 => replace 메소드
+//			str = str.replace(filter[i], star);
+//		}
+		
+		// 출력
+//		System.out.println(str);
 //		
 //	}
+		/*
+		 * 욕설의 앞자리만 살려서 출력하고 싶다면?
+		 * ex: 이런 신** 같은 개** 호***야!!!
+		 * 
+		 * String[] filter = {"신발끈", "개나리", "수박씨", "호루라기", "시베리아", "십장생", "조카", "주옥", "쌍쌍바", "십자수", "식빵"};
+		 * 
+		 * for(int i = 0; i < filter.length; i++) {
+		 * 		int size = filter[i].length(); 
+		 *		String star ="" + filter[i].charAt(0); // 욕설의 첫 글자를 가지고 있게 함
+		 *
+		 *		for(int j = 0, j < size -1; j++) { // size - 1 해서 욕설의 글자보다 한 글자 적을 때까지!
+		 *			star += "*";
+		 *
+		 *			str = str.replace(filter[i], star);
+		 *	}
+		
+		 *	// 출력
+		 *	System.out.println(str);
+		 * 
+		 */
 		
 		
 	}

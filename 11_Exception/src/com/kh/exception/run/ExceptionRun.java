@@ -1,5 +1,7 @@
 package com.kh.exception.run;
 
+import java.io.IOException;
+
 import com.kh.exception.controller.A_UncheckedException;
 import com.kh.exception.controller.B_CheckedException;
 
@@ -27,8 +29,9 @@ public class ExceptionRun {
 		 * 
 		 */
 
-
-	public static void main(String[] args) {
+	// main 메소드에서 throws로 예외 처리를 떠넘기게 되면 JVM에 의해 예외 처리가 됨!
+	// JVM이 어떻게 예외처리를 해 줄지 모르기 때문에 내가 직접 try ~ catch문으로 예외처리하는 것을 권장함
+	public static void main(String[] args) throws IOException { // JVM이 알아서 처리해 줌...
 		
 		A_UncheckedException a = new A_UncheckedException();
 		
@@ -39,6 +42,15 @@ public class ExceptionRun {
 		B_CheckedException b = new B_CheckedException();
 		
 		// b.method1();
+		/*
+		try {
+			b.method2();
+		} catch (IOException e) {
+			System.out.println("예외 발생됨"); // method1이 떠넘긴 예외 처리를 반드시 이렇게 try ~ catch문으로 받아 줘야 함
+		}
+		*/
+		// 계속 계속 떠넘기다가 여기서도 예외 처리 하기 싫으면??
+		
 		b.method2();
 
 	}

@@ -13,12 +13,21 @@ public class B_CheckedException {
 	 *  => 주로 사람이 아닌 외부 매체와 어떤 "입출력"이라는 과정이 나타날 때 주로 발생함
 	 */
 	
-	public void method1() {
+	public void method1() throws IOException { // 얘도 떠넘긴다면? method1의 예외처리는 method1을 호출한 b.method1(); (== Run클래스의 메인 메소드)가 예외처리 해야 함
+		/*
+		try {
+			method2();
+		} catch (IOException e) {
+			System.out.println("예외 발생됨"); // method2가 떠넘긴 예외 처리를 반드시 이렇게 try ~ catch문으로 받아 줘야 함
+		}
+		*/
 		
-		method2();
+		method2(); // public void method1() "throws IOException" { // 적는 순간 빨간 밑줄 사라짐
+
 	}
 	
-	public void method2() {
+	// throws 방법
+	public void method2() throws IOException {
 		
 		// Scanner 와 같이 키보드로 값을 입력받을 수 있는 객체 (단, 이 객체는 문자열로만 생성 가능 == 겁나 옛날 버전이라서)
 		// => IOException이 발생할 법한 상황 연출을 위함임
@@ -44,6 +53,11 @@ public class B_CheckedException {
 		*/
 		
 		// 2. throws: 떠넘기기, 위임하기
+		//			    지금 여기서 예외를 바로 처리하지 않고 현재 이 메소드를 호출한 곳으로 떠넘기겠다라는 뜻
+		
+		String str = br.readLine(); // public void method2() "throws IOException" { // 를 추가하는 순간 이 오류를 method2()를 호출한 method1()에게 떠넘기게 됨
+									// 즉, be.readLine()에서의 빨간 밑줄은 사라지고 method1에 빨간 밑줄이 생김!
+		System.out.println("문자열의 길이: " + str.length());
 		
 	}
 
