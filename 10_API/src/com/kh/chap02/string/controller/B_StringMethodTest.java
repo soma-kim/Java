@@ -117,6 +117,10 @@ public class B_StringMethodTest {
 		// 단어들을 배열에 담아 놓는 게 편하다?
 		String abuse = "신발끈,개나리,수박씨,호루라기,시베리아,십장생,조카,주옥,쌍쌍바,십자수,식빵"; // 11개
 		String[] arr = abuse.split(","); // 현재 arr[10] 배열에 11개의 욕이 담겨 있음
+		// System.out.println(arr.length); // 11
+		
+		// 문자열 배열의 경우 for문을 이런 식으로도 쓸 수 있음 (향상된 for문, foreach문)
+		// for(값을받아줄수있는변수선언문 : 순차적으로접근할배열또는컬렉션명)
 		
 		// arr 배열에 담긴 욕의 수만큼 for문을 돌 거
 		for( String sAbuse : arr ) {	//sAbuse 처음에는 신발끈이, 두번째는 개나리가,세번째는 수박씨가 담길 거
@@ -148,36 +152,6 @@ public class B_StringMethodTest {
 //		
 //		
 //	}
-	
-		
-		
-		/* 
-		 * for문을 이용해서 욕설 나열하는 방법
-			for(int i = 0; i < arr.length; i++) {
-				System.out.println(arr[i]);
-			}
-		*/
-		/*
-		int count = 0; // 그냥 charAt에 대한 숫자를 0부터 시작하기 위해서 변수 초기화 해 놓음
-		
-		for(int i = 0; i < arr.length; i++) { // arr[0] ~ arr.lenght(== 11)까지 차례대로 올라갈 거야
-			System.out.println(arr[i].charAt(count));
-			for(int j = 0; j < sen.length(); j++) { // arr[0] 배열에서 sen 길이까지 모두 char형으로 받아서 확인할 거야
-				System.out.println(arr[i].charAt(j));
-			}
-		}
-		*/
-		// if() // 뽑은 charAt의 글자 중에 sen에 해당하는 문자가 있다면 변환해라...
-		
-		/*
-		for(int i = 0; i < arr.length; i++) {
-			if(sen.equals(arr[i])) { // sen의 앞뒤로 같아야 하는데... ㅠ
-				System.out.println(sen.replace(sen, '*')); // String sen을 char로 어케 바꾸지
-				
-				
-			}
-		}
-		*/
 		
 		
 	}
