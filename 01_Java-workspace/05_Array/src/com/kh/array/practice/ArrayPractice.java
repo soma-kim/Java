@@ -455,7 +455,7 @@ public class ArrayPractice {
 			
 			for(int j = 0; j < i; j++) {
 				if(arr[i] == arr[j]) {
-					i--;
+					i--; 
 				}
 				
 				break;
