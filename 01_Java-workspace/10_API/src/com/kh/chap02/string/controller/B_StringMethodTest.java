@@ -92,7 +92,7 @@ public class B_StringMethodTest {
 		// char[] => 문자열
 		char[] arr2 = {'a', 'p', 'p', 'l', 'e'};
 		
-		// 9. static valueOf(char[] data): 변환값 String형
+		// 9. String.valueOf(char[] data): 변환값 String형
 		// => 전달된 char[] 배열에 담긴 문자들을 하나의 문자열로 연이어서 리턴
 		System.out.println(String.valueOf(arr2)); // apple
 

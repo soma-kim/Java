@@ -11,7 +11,7 @@ public class StringRun {
 		A_StringPoolTest a = new A_StringPoolTest();
 		// a.method1();
 		
-		// a.method2();
+		 a.method2();
 		
 		// a.method3();
 		
@@ -19,7 +19,7 @@ public class StringRun {
 		
 		// b.method1();
 		
-		b.method2();
+		// b.method2();
 		
 		C_StringTokenizerTest c = new C_StringTokenizerTest();
 		
