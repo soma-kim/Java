@@ -56,6 +56,17 @@ public class FileRun {
 			 * 
 			 */
 			
+			// File 클래스에서 제공하는 유용한 메소드들
+			System.out.println(folder.isFile()); // file인지 아닌지 판별하는 메소드, 폴더이므로 false 반환
+			System.out.println(file.isFile()); // 파일이므로 true 반환
+			
+			System.out.println("파일명: " + file.getName()); // person.txt
+			System.out.println("상위폴더: " + file.getParent()); // test
+			System.out.println("파일용량: " + file.length()); // 파일의 용량, 크기 반환! 아직 파일 안에 작업한 게 없기 때문에 현재 용량은 0
+			System.out.println("절대경로: " + file.getAbsolutePath()); // 상대 경로로 만든 파일이라도 절대 경로(C: or D:)로 나타냄
+			
+			// 파일 삭제 메소드
+			file.delete();
 		
 		} catch(IOException e) {
 			e.printStackTrace();
