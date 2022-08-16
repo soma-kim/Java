@@ -164,7 +164,7 @@ public class B_StringMethodTest {
 //			
 //			// 각 인덱스에 들은 필터링할 문자열 기준으로 치환할 문자열을 새로 생성
 //			int size = filter[i].length(); // 해당 글자의 글자 수를 추출
-//			String star ="";
+//			String star = "";
 //			for(int j = 0, j < size; j++) {
 //				star += "*";
 //			}
