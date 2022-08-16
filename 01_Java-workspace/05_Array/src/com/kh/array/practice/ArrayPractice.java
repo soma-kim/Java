@@ -129,8 +129,9 @@ public class ArrayPractice {
 	}
 	
 	/* **(1) 배열 자료형을 String으로 하고 싶다면 chatAt 대신 subString 쓰면 됨!
-	* senArr[i] = sen.substring(i, i+1);
-	* subString(i번째부터, i+1개만큼 뽑아라); 근데 왜 i+1이어햐 하징?
+	* senArr[i] = sen.substring(i, i+1); 
+	* subString(i번째부터, i+1개만큼 뽑아라); 근데 왜 i+1이어야 하징? 
+	*i 부터 (i+1) -1 길이까지만큼 출력하라는 뜻이기 때문에 결국 1개씩 출력하는 뜻이 됨
 	*/
 	
 //	“월“ ~ “일” (요일)까지 초기화된 문자열 배열을 만들고 0부터 6까지 숫자를 입력 받아
@@ -365,7 +366,7 @@ public class ArrayPractice {
 		int[] arr = new int[10];
 
 		int max = 0;
-		int min = 0;
+		int min = 10;
 		
 		for (int i = 0; i < arr.length; i++) {
 			int num = (int)(Math.random()*10) + 1;
@@ -373,8 +374,8 @@ public class ArrayPractice {
 			
 			System.out.print(arr[i]  + " ");
 			
-			max = Math.max(arr[i], 1);
-			min = Math.min(arr[i], 10);
+			max = Math.max(arr[i], max);
+			min = Math.min(arr[i], min);
 			
 			}
 		
@@ -456,9 +457,9 @@ public class ArrayPractice {
 			for(int j = 0; j < i; j++) {
 				if(arr[i] == arr[j]) {
 					i--; 
+					break;
 				}
-				
-				break;
+
 			}
 			
 		}

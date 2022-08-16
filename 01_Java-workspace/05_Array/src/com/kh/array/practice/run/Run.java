@@ -30,12 +30,12 @@ public class Run {
 		
 		// a.practice11();
 		
-		// Math.max, min 버전은 안 되는 것인가...
+		// Math.max, min 버전
 		// a.practice11_1();
 		
 		// a.practice12();
 		
-		a.practice13();
+		// a.practice13();
 		
 		 // a.practice14();
 		
