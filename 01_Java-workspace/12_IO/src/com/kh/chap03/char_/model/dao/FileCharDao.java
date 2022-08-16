@@ -56,13 +56,63 @@ public class FileCharDao {
 		// 1. 스트림 객체 생성 == 연결 통로를 짓겠음
 		try {
 			fr = new FileReader("b_char.txt"); // 입력 통로의 경우 무조건! 존재하는 경로로 제시해야 됨!
-		} catch (FileNotFoundException e) {
+	
 
-			// 2. 입력받기
+			// 2. 입력받기: read() 메소드 사용
+				/*
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				System.out.println(fr.read());
+				// 파일 끝을 만나는 순간 fr.read() => -1 반환
+				System.out.println(fr.read());
+				*/
+			// => 문자 기반 스트림도 마찬가지로 문서의 끝을 만났을 때 read 메소드의 반환값이 -1임!!
+			
+			// 반복문 활용
+			/*
+			while(fr.read() != -1) {
+				System.out.println(fr.read());
+			}
+			// => 반복이 한 번 일어날 때마다 read() 메소드가 2번 호출되기 때문에 2, 4번째 등 퐁당퐁당으로 출력됨
+			*/
+			
+			int value = 0;
+			while((value = fr.read()) != -1) { // 소괄호로 우선순위 높이기!
+				System.out.print((char)value);
+			}
+			
 			// 3. 연결 통로 끊기 == 자원 반납 (반드시)
 			
-			e.printStackTrace();
-		}
-	}
+			} catch (FileNotFoundException e) {
+			} catch (IOException e) {
+				e.printStackTrace();
+			} finally {
+			
+				// 3. 자원 반납 (반드시)
+				try {
+					fr.close();
+				} catch(IOException e) {
+					e.printStackTrace();
+				}
 
+			}
+	}
 }

@@ -18,6 +18,8 @@ public class CharRun {
 		FileCharDao fc = new FileCharDao();
 		
 		fc.fileSave();
+		
+		fc.fileRead();
 
 	}
 
