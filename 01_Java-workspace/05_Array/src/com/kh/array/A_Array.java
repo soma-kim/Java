@@ -257,7 +257,7 @@ public class A_Array {
 		
 		for(int i = 0; i < arr.length; i++) {
 			
-			arr[i] = (int)(Math.random() * 50) + 51;
+			arr[i] = (int)(Math.random() * 100) + 51;
 			
 		}
 		
