@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 import com.kh.chap04.assist.part02.object.model.vo.Phone;
 
@@ -20,12 +21,21 @@ public class ObjectsDao {
 		// FileOutputStram + ObjectOutputStream (1byte짜리 좁은 통로)
 		
 		// 테스트용 객체 배열
+		/*
 		Phone[] arr = new Phone[3]; // [0] [1] [2]
 		
 		// 테스트용 데이터 담기
 		arr[0] = new Phone("아이폰", 1300000);
 		arr[1] = new Phone("갤럭시", 1500000);
 		arr[2] = new Phone("플립폰", 2000000);
+		*/
+		
+		ArrayList<Phone> phoneList = new ArrayList<>();
+		
+		phoneList.add(new Phone("아이폰", 1300000)); // 0번 인덱스
+		phoneList.add(new Phone("갤럭시", 1500000)); // 1번 인덱스
+		phoneList.add(new Phone("플립폰", 2000000)); // 2번 인덱스
+		
 		
 		// try ~ with ~ resource 구문으로 한 큐에 생성
 		
@@ -38,9 +48,17 @@ public class ObjectsDao {
 			// oos.writeObject(arr[2]);
 			
 			// 반복문 이용해서 내보내기
+			/*
 			for(int i =0; i < arr.length; i++) {
 				oos.writeObject(arr[i]);
 				System.out.println(arr[i]);
+			}
+			*/
+			
+			// ArrayList일 때의 구문
+			for(int i = 0; i < phoneList.size(); i++) {
+				
+				oos.writeObject(phoneList.get(i));
 			}
 			
 		} catch (FileNotFoundException e) {

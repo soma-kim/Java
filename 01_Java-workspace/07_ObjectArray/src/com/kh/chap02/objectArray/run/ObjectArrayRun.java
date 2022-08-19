@@ -1,5 +1,7 @@
 package com.kh.chap02.objectArray.run;
 
+import java.util.ArrayList;
+
 import com.kh.chap02.objectArray.model.vo.Phone;
 
 public class ObjectArrayRun {
@@ -7,6 +9,7 @@ public class ObjectArrayRun {
 	public static void main(String[] args) {
 		
 		// "Phone 타입의 주소값만" 담을 수 있는 배열 생성
+		/*
 		Phone[] arr = new Phone[3]; // JVM에 의해 모든 방이 null 값으로 초기화된 상태
 		
 		System.out.println(arr); // 주소값
@@ -20,7 +23,7 @@ public class ObjectArrayRun {
 		arr[0] = new Phone();
 		arr[1] = new Phone("갤럭시", "10", "삼성", 1000000);
 		arr[2] = new Phone("아이폰", "11pro", "애플", 800000);
-				
+			
 		arr[0].setName("아이폰");
 		arr[0].setSeries("8");
 		arr[0].setBrand("애플");
@@ -37,6 +40,9 @@ public class ObjectArrayRun {
 		}
 		System.out.println("총 가격: " + sum + "원");
 		System.out.println("평균가: " + sum / arr.length + "원");
+		*/
+		
+		
 	}
 
 }
