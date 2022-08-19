@@ -74,7 +74,7 @@ public class ServerProgram {
 		// 출력용 스트림 (클라이언트에게 값을 전달할 용도)
 		// socket.getOutputStream()
 		// + 1byte 와 2byte 사이의 호환이 가능한 보조 스트림(OutputStreamWriter)
-		// PrintWriter
+		// PrintWriter => 1byte 스트림과 바론 호환 가능한 생성자가 오버로딩되어 있음!
 			pw = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
 			
 			// => 기반스트림에 성능 향상을 위해 보조스트림을 각각 2개씩 붙여 줌
