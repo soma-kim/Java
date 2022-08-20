@@ -220,31 +220,40 @@ public class ArrayPractice {
 	
 	public void practice8() {
 		
+		// 정수 입력받기
 		System.out.print("정수: ");
 		int num = sc.nextInt();
 		sc.nextLine();
 		
-		int count = 1;
-		
+		// 입력한 정수가 홀수가 아니거나 3 미만일 경우
 		if(num < 3 || num % 2 == 0) {
 			System.out.println("다시 입력하세요.");
-			practice8();
-			return;
+			practice8(); // 다시 입력하세요 출력 후 다시 정수를 입력받기(처음부터 다시 실행) 위해 메소드를 호출했으며,
+			return; // 메소드 재실행 후의 위치는 이곳이기 때문에 프로그램 종료를 위해 return을 씀
 		} else {
-			int[] arr = new int[num];
 			
-			for(int i = 0; i < arr.length; i++) {
-				if (i < Math.ceil(num / 2)) {
-				arr[i] = count;
-				count++;
+			// 조건이 맞는 숫자를 입력했을 경우
+			
+//			3이상인 홀수 정수를 입력 받아 배열의 중간까지는 1부터 1씩 증가하여 오름차순으로 값을 넣고,
+//			중간 이후부터 끝까지는 1씩 감소하여 내림차순으로 값을 넣어 출력하세요.
+			
+			int count = 1; // 배열의 시작 수 1을 넣은 변수 초기화
+			
+			int[] arr = new int[num]; // 사용자가 입력한 수의 크기와 같은 배열 생성
+			
+			for(int i = 0; i < arr.length; i++) { // 배열의 길이만큼 i를 1씩 증가시키며 반복
+				if (i < Math.ceil(num / 2)) { // 배열의 숫자가 증가하는지 감소하는지 달라지는 기준 == 배열의 "중간"
+											  // 5개의 배열 생성 시 [0], [1], [2] 방인 3개까지는 값이 증가했으므로 나누기 2 한 값을 무조건 올림
+				arr[i] = count; //0번째에 1을 넣음
+				count++; // 현재 위치가 배열의 중간보다 작다면(앞이라면) 1씩 증가시켜 줘야 함
 				} 
 				
-				else {
+				else { //  여기서부터는 배열 중간을 넘은 시점(중간 이후)이므로 배열에 들어갈 값이 1씩 감소해야 함
 					arr[i] = count;
 					count--;
 				}
 			
-				System.out.print(arr[i] + " ");
+				System.out.print(arr[i] + " "); // 배열 출력
 			}
 		}
 		
@@ -259,15 +268,40 @@ public class ArrayPractice {
 //	
 	public void practice9() {
 		
+		// 치킨 이름 입력받기
 		System.out.print("치킨 이름을 입력하세요: ");
 		String name = sc.nextLine();
 		
+		// 치킨 메뉴가 들어가 있는 배열 설정(문제에서 스스로 "값을 넣어둔 배열"을 만들어 놓으라고 함)
 		String menu = "후라이드,양념,순살,슈프림양념";
-		String[] menuArr = menu.split(",");
-		
-		
-		for(int i = 0; i < menuArr.length; i++) {
+		String[] menuArr = menu.split(","); // split구문 활용하여 ,로 연결된 문자열을 배열화시킴
+				
+		// 사용자가 입력한 치킨 이름이 메뉴 배열에 들어가 있는지 확인하는 작업
+		for(int i = 0; i < menuArr.length; i++) { // 메뉴 배열의 길이만큼 반복 돌리기
 			
+			// 실패 방법 1.
+			// 아래와 같이 if문을 돌렸을 때 배열의 첫 번째 값과 입력값이 일치하지 않는다면 for문을 다 돌기 전에 "없는 메뉴"로 인식함
+			// 배열의 2, 3, 4번째 값과 일치함에도 불구하고 없는 메뉴 출력문과 배달 가능 출력문이 모두 나옴
+			
+			/*
+			if(name.equals(menuArr[i])) {
+				System.out.printf("%s치킨 배달 가능", name);
+				return;	
+					
+			} else {
+				System.out.println(name + "치킨은 없는 메뉴입니다.");
+				return;
+			}
+		}
+	}
+	*/
+			
+			
+			// 실패 방법 2
+			// switch 문을 사용할 시 입력받은 name만 사용하고,
+			// 메뉴 배열의 "길이"만 이용할 뿐 메뉴 배열의 내용을 전혀 사용하지 않음
+			
+			/*
 			switch(name) {
 			case "후라이드" : System.out.print("후라이드치킨 배달 가능");
 							return;
@@ -281,24 +315,34 @@ public class ArrayPractice {
 							return;
 			}
 		}
-		
-		// 천재 루 코드 ;; flag를 세워서 이용하는 법!!
-		
-//		boolean flag = false;
-//	
-//		for( int i = 0 ; i < menuArr.length; i++ ) {
-//			if( menuArr[i].equals(name) ) {
-//				System.out.println(name + "치킨 배달 가능");
-//				
-//				flag = true;
-//			} 
-//		}
-//		
-//		if( !flag ) {
-//			System.out.println(name + "치킨은 없는 메뉴입니다.");
-//		}
-//		
 	}
+			*/
+			
+			// 현재 코드상의 문제점
+			// 문자열이 배열 내용과 일치하는지, 하지 않는지로만 따지면서 4번의 반복을 돌고, 4번의 출력을 함
+			// 일치할 때의 출력문에 return을 걸어 준다 하더라도 배열의 0번째 방과 일치하지 않는다면
+			// for문 돌 때마다 일치하기 전까지 무조건 "없는 메뉴입니다"를 출력함
+			
+			// 해결 방법!
+			// 조건을 다르게 걸어 주자!
+			// 조건1. 문자열과 배열 내용이 일치할 때는 배달 가능 (기존과 동일)
+			// 조건2. for문의 마지막까지 일치하지 않는다면 그때 없는 메뉴를 출력해라! (new!)
+			// 조건3. 조건1, 2와 일치하는 상황이 아니라면(문자열과 배열값이 일치하지 않고, 현재 마지막 for문을 도는 게 아니라면) 증감식으로 올라가라
+			
+			if( menuArr[i].equals(name) ) {
+				System.out.println(name + "치킨 배달 가능");
+				return;
+				
+			} else if (i == menuArr.length -1) { 
+				System.out.println(name + "치킨은 없는 메뉴입니다.");
+				
+			} else {
+				continue;
+			}
+		}
+
+	}
+		
 	
 //	10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고
 //	1~10 사이의 난수를 발생시켜 배열에 초기화한 후 출력하세요.
