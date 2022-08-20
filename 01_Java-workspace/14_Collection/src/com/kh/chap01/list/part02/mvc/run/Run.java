@@ -10,6 +10,7 @@ public class Run {
 		MusicView mv = new MusicView();
 		
 		mv.mainMenu();
+		
 
 	}
 

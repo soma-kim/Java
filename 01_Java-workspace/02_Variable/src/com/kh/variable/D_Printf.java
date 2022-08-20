@@ -72,6 +72,7 @@ public class D_Printf {
 		// 문자 또는 문자열과 같이 쓸 수 있는 옵션
 		System.out.printf("%C %S \n", ch, str); // A HELLO, 모두 대문자로 출력
 		// %C, %S: 영어 알파벳일 경우 대문자로 변경해서 출력
+	
 		
 		
 	}
