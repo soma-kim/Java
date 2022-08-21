@@ -9,14 +9,15 @@ public class GenericListRun {
 	
 	/*
 	 * * 제네릭 (Generic)
-	 * <> 안에 어떤 타입을 선언해주어 해당 컬렉션이 사용할 객체의 타입을 고정시켜주는 개념
-	 * 내가 다룰 객체의 타입을 미리 명시하여 내가 사용하고 싶은 데이터 타입만 사용할 수 있게 해주는 효과
+	 * <> 안에 어떤 타입을 선언해 주어 해당 컬렉션이 사용할 객체의 타입을 고정시켜 주는 개념
+	 * 내가 다룰 객체의 타입을 미리 명시하여 내가 사용하고 싶은 데이터 타입만 사용할 수 있게 해 주는 효과
 	 * => 마치 배열처럼 같은 자료형의 값들만 담겠다.
 	 * 
 	 * 별도의 제네릭 제시 없이 컬렉션 객체를 생성하면 (E == Object)
 	 * ArrayList list = new ArrayList();
 	 * 내부적으로 
 	 * ArrayList<Object> list = new ArrayList<>();
+	 * => 그래서 아무 자료형이나 다 받아쳐 줄 수 있었던 것!
 	 * 
 	 * 별도의 제네릭 제시를 해서 컬렉션 객체를 생성하면 (E == Music)
 	 * ArrayList<Music> list = new ArrayList<>();
@@ -27,7 +28,7 @@ public class GenericListRun {
 		// 컬렉션명<자료형> 객체명 = new 컬렉션명<>();
 		// => new 구문에 있는 제네릭 설정 부분에는 자료형 생략 가능 (JDK 8버전부터 가능한 문법)
 		ArrayList<Music> list = new ArrayList<>(3);
-		System.out.println(list); // 비어있는 상태
+		System.out.println(list); // 비어 있는 상태
 		
 		// E --> Element : 제네릭 (E == Music)
 		// 1. add(E e)
@@ -35,7 +36,7 @@ public class GenericListRun {
 		list.add(new Music("필마이리듬", "레드벨벳")); 
 		// list.add("끝");
 		System.out.println(list);
-		// 순서가 유지되면서 값 추가 (각 index 에 들어있는 꼴)
+		// 순서가 유지되면서 값 추가 (각 index 에 들어 있는 꼴)
 		// 크기에 제약 없음
 		// 다양한 타입의 값을 넣을 수 없음 => 제네릭 설정을 했기 때문
 		
@@ -92,51 +93,24 @@ public class GenericListRun {
 		System.out.println("=====================================");
 		
 		// 9. isEmpty()
-		System.out.println("해당 리스트가 비어있습니까? : " + list.isEmpty());
+		System.out.println("해당 리스트가 비어 있습니까? : " + list.isEmpty());
 		
 		// 10. clear()
 		list.clear();
 		System.out.println(list);
-		System.out.println("해당 리스트가 비어있습니까? : " + list.isEmpty());
+		System.out.println("해당 리스트가 비어 있습니까? : " + list.isEmpty());
 	}
 	
 	/*
 	 * * 제네릭을 설정하는 이유
 	 * 1. 명시한 타입의 객체만 저장 가능하도록 타입의 제한을 두기 위해
-	 * 2. 컬렉션에 저장된 객체를 꺼내서 사용할 때 매번 형변황하는 절차를 없애기 위해
+	 * 2. 컬렉션에 저장된 객체를 꺼내서 사용할 때 매번 형변환 하는 절차를 없애기 위해
 	 * 
 	 * * 제네릭 설정 시 주의할 점
-	 * 컬렉션에는 객체 타입만 들어갈 수 있기 때문에 기본자료형으로 설정은 불가!!
+	 * 컬렉션에는 객체 타입만 들어갈 수 있기 때문에 기본 자료형으로 설정은 불가!!
 	 * 예) ArrayList<int> list = new ArrayList<>(); // 불가
 	 * 		ArrayList<Integer> list = new ArrayList<>(); // 가능 => E == Integer
 	 * 
 	 */
-	
-	
-	
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

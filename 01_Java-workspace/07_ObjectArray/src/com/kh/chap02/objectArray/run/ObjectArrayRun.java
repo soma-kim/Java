@@ -42,7 +42,28 @@ public class ObjectArrayRun {
 		System.out.println("평균가: " + sum / arr.length + "원");
 		*/
 		
+		// ArrayList 버전
+		ArrayList<Phone> list = new ArrayList<>(3);
 		
+		/*
+		arr[0] = new Phone();
+		arr[1] = new Phone("갤럭시", "10", "삼성", 1000000);
+		arr[2] = new Phone("아이폰", "11pro", "애플", 800000);
+		*/
+		
+		list.add(0, new Phone());
+		list.add(1, new Phone("갤럭시", "10", "삼성", 1000000));
+		list.add(2, new Phone("아이폰", "11pro", "애플", 800000));
+		
+		// 향상된 for문으로 출력
+		int sum = 0;
+		for(Phone p : list) {
+			System.out.println(p.information());
+			sum += p.getPrice();
+		}
+		
+		System.out.println("총 가격: " + sum);
+		System.out.println("평균가: " + (sum / list.size()));
 	}
 
 }

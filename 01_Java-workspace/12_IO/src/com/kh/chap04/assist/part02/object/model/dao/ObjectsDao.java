@@ -30,6 +30,8 @@ public class ObjectsDao {
 		arr[2] = new Phone("플립폰", 2000000);
 		*/
 		
+		// Phone 객체만 들어갈 수 있는 ArrayList 생성
+		
 		ArrayList<Phone> phoneList = new ArrayList<>();
 		
 		phoneList.add(new Phone("아이폰", 1300000)); // 0번 인덱스
@@ -47,7 +49,8 @@ public class ObjectsDao {
 			// oos.writeObject(arr[1]);
 			// oos.writeObject(arr[2]);
 			
-			// 반복문 이용해서 내보내기
+			// 객체 배열일 때의 구문
+			// 반복문 이용해서 파일로 내보내기
 			/*
 			for(int i =0; i < arr.length; i++) {
 				oos.writeObject(arr[i]);

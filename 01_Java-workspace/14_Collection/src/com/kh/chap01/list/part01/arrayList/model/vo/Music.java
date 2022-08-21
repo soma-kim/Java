@@ -3,8 +3,8 @@ package com.kh.chap01.list.part01.arrayList.model.vo;
 public class Music {
 	
 	// 필드부
-	private String title;
-	private String artist;
+	private String title; // 노래명
+	private String artist; // 가수명
 	
 	//
 	public Music() {
