@@ -1,4 +1,4 @@
-package com.kh.chap01.list.part03.model.vo;
+package com.kh.chap01.list.part02.mvcModelHomework.model.vo;
 
 public class Book {
 	

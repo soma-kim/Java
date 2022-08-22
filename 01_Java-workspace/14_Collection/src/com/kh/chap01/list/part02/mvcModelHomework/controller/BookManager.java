@@ -1,8 +1,8 @@
-package com.kh.chap01.list.part03.controller;
+package com.kh.chap01.list.part02.mvcModelHomework.controller;
 
 import java.util.ArrayList;
 
-import com.kh.chap01.list.part03.model.vo.Book;
+import com.kh.chap01.list.part02.mvcModelHomework.model.vo.Book;
 
 // controller
 public class BookManager {

@@ -1,10 +1,10 @@
-package com.kh.chap01.list.part03.view;
+package com.kh.chap01.list.part02.mvcModelHomework.view;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import com.kh.chap01.list.part03.controller.BookManager;
-import com.kh.chap01.list.part03.model.vo.Book;
+import com.kh.chap01.list.part02.mvcModelHomework.controller.BookManager;
+import com.kh.chap01.list.part02.mvcModelHomework.model.vo.Book;
 
 // view
 public class BookMenu {

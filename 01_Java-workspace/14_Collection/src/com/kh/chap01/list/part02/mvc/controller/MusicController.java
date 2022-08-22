@@ -7,6 +7,7 @@ public class MusicController {
 	
 	// 음악을 보관할 수 있는 저장소를 전역변수로 빼 두고 두고두고 사용할 목적
 	// => 얘를 insertMusic 메소드 안에서 호출하면 메소드가 끝날 때 함께 사라져 버림!
+	// 	View로부터 요청 시 전달값을 받아 처리 후 View로 처리 결과를 반환
 	ArrayList<Music> list = new ArrayList<>();
 	{
 		// 초기화 블록

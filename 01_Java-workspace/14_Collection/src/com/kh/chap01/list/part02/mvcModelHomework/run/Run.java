@@ -1,6 +1,6 @@
-package com.kh.chap01.list.part03.run;
+package com.kh.chap01.list.part02.mvcModelHomework.run;
 
-import com.kh.chap01.list.part03.view.BookMenu;
+import com.kh.chap01.list.part02.mvcModelHomework.view.BookMenu;
 
 public class Run {
 
