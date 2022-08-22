@@ -47,12 +47,13 @@ public class ObjectArrayRun {
 		
 		/*
 		arr[0] = new Phone();
-		arr[1] = new Phone("갤럭시", "10", "삼성", 1000000);
+		arr[1] = new Phone("갤럭시s", "10", "삼성", 1000000);
 		arr[2] = new Phone("아이폰", "11pro", "애플", 800000);
 		*/
 		
+		// 인덱스를 제시하여 추가
 		list.add(0, new Phone());
-		list.add(1, new Phone("갤럭시", "10", "삼성", 1000000));
+		list.add(1, new Phone("갤럭시s", "10", "삼성", 1000000));
 		list.add(2, new Phone("아이폰", "11pro", "애플", 800000));
 		
 		// 향상된 for문으로 출력
