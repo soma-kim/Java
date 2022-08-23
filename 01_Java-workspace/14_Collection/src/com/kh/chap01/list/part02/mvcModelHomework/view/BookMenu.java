@@ -12,6 +12,10 @@ public class BookMenu {
 	Scanner sc = new Scanner(System.in);
 	BookManager bm = new BookManager();
 	
+	public BookMenu() {
+		
+	}
+	
 	public void mainMenu() {
 		
 		while(true) {
@@ -63,13 +67,14 @@ public class BookMenu {
 		
 		Book book = new Book(title, category, author);
 		
-		int result = bm.insertBook(book);
+//		 int result = bm.insertBook(book);
+		bm.insertBook(book);
 		
-		if(result > 0) {
-			System.out.println("성공적으로 추가되었습니다.");
-		} else {
-			System.out.println("추가 실패");
-		}
+//		if(result > 0) {
+//			System.out.println("성공적으로 추가되었습니다.");
+//		} else {
+//			System.out.println("추가 실패");
+//		}
 
 	}
 		// 추가해 주세요 요청 => Controller 클래스와 메소드를 호출
@@ -85,7 +90,7 @@ public class BookMenu {
 		
 		int result = bm.deleteBook(bNo);
 		
-		if(result > 0) {
+		if(result == 1) {
 			System.out.println("성공적으로 삭제");
 		} else {
 			System.out.println("삭제할 도서가 존재하지 않습니다.");

@@ -14,23 +14,36 @@ public class BookManager {
 	}
 	
 	// 도서 추가 요청 시 실행할 메소드
-	public int insertBook(Book book) {
-
+	public void insertBook(Book book) {
+		
 		int lastNo = 0;
-		int result = 0;
 		
 		try {
-			lastNo = bookList.get(bookList.size()-1).getbNo() + 1;
+			lastNo = bookList.get(bookList.size()-1).getbNo() + 1; //  마지막 도서 번호 + 1
 		} catch (ArrayIndexOutOfBoundsException e) {
 			lastNo = 1;
-		} finally {
-			result++;
 		}
 		
 		book.setbNo(lastNo);
 		bookList.add(book);
+
+//		반환형 int 버전
+//		int lastNo = 0;
+//		int result = 0;
+//		
+//		try {
+//			lastNo = bookList.get(bookList.size()-1).getbNo() + 1;
+//		} catch (ArrayIndexOutOfBoundsException e) {
+//			lastNo = 1;
+//		} finally {
+//			result++;
+//		}
+//		
+//		book.setbNo(lastNo);
+//		bookList.add(book);
+//		
+//		return result;
 		
-		return result;
 	}
 	
 	// 도서 삭제 요청 시 실행할 메소드
@@ -41,6 +54,7 @@ public class BookManager {
 		for(int i = 0; i < bookList.size(); i++) {
 			if(bookList.get(i).getbNo() == bNO) {
 				bookList.remove(i--);
+				result++;
 			}
 		}
 		
