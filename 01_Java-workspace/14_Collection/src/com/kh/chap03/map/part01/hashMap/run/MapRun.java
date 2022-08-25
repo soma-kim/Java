@@ -1,11 +1,11 @@
-package com.kh.chap01.list.part01.hashMap.run;
+package com.kh.chap03.map.part01.hashMap.run;
 
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import com.kh.chap01.list.part01.hashMap.model.vo.Snack;
+import com.kh.chap03.map.part01.hashMap.model.vo.Snack;
 
 public class MapRun {
 

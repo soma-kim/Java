@@ -1,11 +1,11 @@
-package com.kh.chap01.list.part02.properties.run;
+package com.kh.chap03.map.part02.properties.run;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-import com.kh.chap01.list.part01.hashMap.model.vo.Snack;
+import com.kh.chap03.map.part01.hashMap.model.vo.Snack;
 
 public class PropertiesRun1 {
 

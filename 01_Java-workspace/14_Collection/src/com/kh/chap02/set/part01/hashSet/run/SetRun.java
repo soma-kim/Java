@@ -1,10 +1,10 @@
-package com.kh.chap01.list.part01.hashSet.run;
+package com.kh.chap02.set.part01.hashSet.run;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 
-import com.kh.chap01.list.part01.hashSet.model.vo.Student;
+import com.kh.chap02.set.part01.hashSet.model.vo.Student;
 
 public class SetRun {
 

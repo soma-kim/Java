@@ -1,4 +1,4 @@
-package com.kh.chap01.list.part01.hashSet.model.vo;
+package com.kh.chap02.set.part01.hashSet.model.vo;
 
 public class Student {
 	

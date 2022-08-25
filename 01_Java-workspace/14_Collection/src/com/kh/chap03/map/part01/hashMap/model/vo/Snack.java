@@ -1,4 +1,4 @@
-package com.kh.chap01.list.part01.hashMap.model.vo;
+package com.kh.chap03.map.part01.hashMap.model.vo;
 
 public class Snack {
 	
