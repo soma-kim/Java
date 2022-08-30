@@ -6,7 +6,7 @@ public class Music {
 	private String title;
 	private String artist;
 	
-	//
+	// 积己磊何
 	public Music() {
 		super();
 	}
@@ -17,7 +17,7 @@ public class Music {
 		this.artist = artist;
 	}
 	
-	//
+	// 皋家靛何
 	public String getTitle() {
 		return title;
 	}
