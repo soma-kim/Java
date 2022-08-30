@@ -110,6 +110,7 @@ public class MusicController {
 				// 2. 비교적 효율적인 방법은 아니지만 오늘 배운 내용을 활용할 수 있는 방법
 				// => 메모리 영역에 할당이 한 번 더 이루어지긴 함
 				list.set(i, new Music(upTitle, upArtist));
+				// .set(index, value)
 				
 				result++;
 			}
