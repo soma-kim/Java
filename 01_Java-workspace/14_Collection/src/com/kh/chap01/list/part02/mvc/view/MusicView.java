@@ -92,9 +92,8 @@ public class MusicView {
 		System.out.println("== 곡 전체 조회 ==");
 		
 		// 전체 리스트를 조회해 주세요 요청 => Controller 클래스의 메소드 호출
-		ArrayList<Music> list = mc.selectMusicList();
+		ArrayList<Music> list = new ArrayList<>();
 		
-
 		if(list.isEmpty()) { // 리스트가 비어 있을 경우
 			System.out.println("현재 존재하는 곡이 없습니다.");
 		} else {
@@ -103,7 +102,6 @@ public class MusicView {
 			}
 			
 		}
-
 		
 	}
 	

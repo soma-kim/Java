@@ -9,6 +9,8 @@ public class Run {
 		MemberView mv = new MemberView();
 		
 		mv.mainMenu();
+		
+		//mv.insertMember();
  
 	}
 

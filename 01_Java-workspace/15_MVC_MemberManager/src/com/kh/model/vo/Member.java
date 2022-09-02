@@ -16,6 +16,18 @@ public class Member {
 	public Member() {
 		
 	}
+	
+	// insertMemer() 원활한 진행을 위해 userNo를 뺀 생성자 추가
+	public Member(String userId, String userPwd, String userName, int age, char gender, String email, String phone) {
+		super();
+		this.userId = userId;
+		this.userPwd = userPwd;
+		this.userName = userName;
+		this.age = age;
+		this.gender = gender;
+		this.email = email;
+		this.phone = phone;
+	}
 
 	public Member(int userNo, String userId, String userPwd, String userName,
 				  int age, char gender, String email, String phone) {
@@ -101,5 +113,7 @@ public class Member {
 		return "Member [userNo=" + userNo + ", userId=" + userId + ", userPwd=" + userPwd + ", userName=" + userName
 				+ ", age=" + age + ", gender=" + gender + ", email=" + email + ", phone=" + phone + "]";
 	}
+	
+	
 
 }
