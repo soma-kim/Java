@@ -10,8 +10,5 @@ public class Run {
 		
 		mv.mainMenu();
 		
-		//mv.insertMember();
- 
 	}
-
 }

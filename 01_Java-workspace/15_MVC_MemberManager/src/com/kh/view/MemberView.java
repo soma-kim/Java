@@ -126,7 +126,7 @@ public class MemberView {
 		if(result > 0) {
 			System.out.println("성공적으로 추가되었습니다.");
 		} else {
-			System.out.println("곡 추가에 실패했습니다.");
+			System.out.println("회원 추가에 실패하였습니다.");
 		}
 
 	}
@@ -143,7 +143,7 @@ public class MemberView {
 		
 		if(list.isEmpty()) {
 			
-			System.out.println("등록된 멤버가 없습니다.");
+			System.out.println("등록된 회원이 없습니다.");
 			
 		} else {
 			
@@ -219,18 +219,31 @@ public class MemberView {
 		System.out.print("삭제할 회원의 아이디: ");
 		String userId = sc.nextLine();
 		
-		System.out.print("삭제 후 복구할 수 없습니다. 정말 삭제하시겠습니까? (Y/N): ");
-		char answer = sc.nextLine().toUpperCase().charAt(0);
+		char answer = ' ';
 		
-		int result = mc.deleteMember(userId);
+		while (true) {
 		
-		if(answer == 'Y') {
-			if(result > 0) {
-				System.out.println("성공적으로 삭제되었습니다.");
-			} else {
-				System.out.println("일치하는 아이디가 없으므로 삭제할 수 없습니다.");
+			System.out.print("삭제 후 복구할 수 없습니다. 정말 삭제하시겠습니까? (Y/N): ");
+			answer = sc.nextLine().toUpperCase().charAt(0);
+			
+			if(answer == 'Y') {
+				int result = mc.deleteMember(userId);
+				
+					if(result > 0) {
+						System.out.println("성공적으로 삭제되었습니다.");
+						break;
+					} else {
+						System.out.println("일치하는 아이디가 없으므로 삭제할 수 없습니다.");
+						return;
+					}
 			}
-		
+			else if (answer == 'N') {
+				System.out.println("회원 삭제를 취소하셨습니다. 메뉴 화면으로 돌아갑니다.");
+				break;
+				
+			} else {
+				System.out.println("Y 또는 N만 입력하실 수 있습니다. 다시 입력해 주세요.");
+			}
 		}
 		
 	}
