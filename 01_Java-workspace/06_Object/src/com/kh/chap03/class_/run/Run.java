@@ -1,4 +1,4 @@
-package com.kh.chap03.class_.run;
+package com.kh.chap03.class_.run; 
 
 import com.kh.chap03.class_.model.vo.Person;
 import com.kh.chap03.class_.model.vo.Product;
@@ -7,27 +7,27 @@ public class Run {
 
 	public static void main(String[] args) {
 		
-		// PersonÀÌ¶ó´Â Å¬·¡½º
-		// == »ç¶÷ÀÇ Á¤º¸¸¦ ´ã°íÀÚ ³»°¡ ¸¸µç ³ªÀÇ ÀÚ·áÇü
-		// 	  (¿©·¯ °³ÀÇ ÀÚ·áÇü, ¿©·¯ °³ÀÇ °ªµéÀ» º¸°ü °¡´É)
-		// == »ç¿ëÀÚ Á¤ÀÇ ÀÚ·áÇü (Ä¿½ºÅÍ¸¶ÀÌÂ¡)
+		// Personì´ë¼ëŠ” í´ëž˜ìŠ¤
+		// == ì‚¬ëžŒì˜ ì •ë³´ë¥¼ ë‹´ê³ ìž ë‚´ê°€ ë§Œë“  ë‚˜ì˜ ìžë£Œí˜•
+		// 	  (ì—¬ëŸ¬ ê°œì˜ ìžë£Œí˜•, ì—¬ëŸ¬ ê°œì˜ ê°’ë“¤ì„ ë³´ê´€ ê°€ëŠ¥)
+		// == ì‚¬ìš©ìž ì •ì˜ ìžë£Œí˜• (ì»¤ìŠ¤í„°ë§ˆì´ì§•)
 		
-		Person p = new Person(); // °´Ã¼ »ý¼º == ÀÎ½ºÅÏ½ºÈ­
+		Person p = new Person(); // ê°ì²´ ìƒì„± == ì¸ìŠ¤í„´ìŠ¤í™”
 		
-		System.out.println(p); // ÁÖ¼Ò°ª
-		System.out.println(p.information()); // ÃÊ±â°ª, JVM¿¡ ÀÇÇØ Ã¤¿öÁø ±âº»°ªµéÀÌ Ãâ·Â
+		System.out.println(p); // ì£¼ì†Œê°’
+		System.out.println(p.information()); // ì´ˆê¸°ê°’, JVMì— ì˜í•´ ì±„ì›Œì§„ ê¸°ë³¸ê°’ë“¤ì´ ì¶œë ¥
 
-		// => °ª ´ëÀÔÀ» ¾È ÇØ¼­ ±âº»°ªÀÌ Ãâ·ÂµÈ °ÍÀÌ¹Ç·Î ¸Þ¼Òµå°¡ Àß ¸¸µé¾îÁø °ÍÀÓÀ» ¾Ë ¼ö ÀÖÀ½!
+		// => ê°’ ëŒ€ìž…ì„ ì•ˆ í•´ì„œ ê¸°ë³¸ê°’ì´ ì¶œë ¥ëœ ê²ƒì´ë¯€ë¡œ ë©”ì†Œë“œê°€ ìž˜ ë§Œë“¤ì–´ì§„ ê²ƒìž„ì„ ì•Œ ìˆ˜ ìžˆìŒ!
 		
-		// °ª ³Ö±â => setter ¸Þ¼Òµå
+		// ê°’ ë„£ê¸° => setter ë©”ì†Œë“œ
 		p.setId("user01");
 		p.setPwd("pass01");
-		p.setName("È«±æµ¿");
+		p.setName("í™ê¸¸ë™");
 		
-		System.out.println(p.information()); // id, pwd, name¸¸ ÀÔ·ÂµÇ°í ³ª¸ÓÁö´Â ±âº»°ª Ãâ·ÂµÊ
+		System.out.println(p.information()); // id, pwd, nameë§Œ ìž…ë ¥ë˜ê³  ë‚˜ë¨¸ì§€ëŠ” ê¸°ë³¸ê°’ ì¶œë ¥ë¨
 		
 		p.setAge(25);
-		p.setGender('³²');
+		p.setGender('ë‚¨');
 		p.setPhone("010-1111-2222");
 		p.setEmail("hong@naver.com");
 		
@@ -35,30 +35,30 @@ public class Run {
 		
 		// --------------------------------------------
 		
-		// »óÇ° °´Ã¼ »ý¼º
+		// ìƒí’ˆ ê°ì²´ ìƒì„±
 		Product p1 = new Product();
 		
-		p1.setpName("¾ÆÀÌÆù11pro");
+		p1.setpName("ì•„ì´í°11pro");
 		p1.setPrice(1000000);
-		// p1.setBrand("¾ÖÇÃ");
-		// brand´Â ÀÏÄ¡ÇÏ¹Ç·Î Product Å¬·¡½º¿¡¼­ ÇÊµå ¼±¾ð°ú µ¿½Ã¿¡ ÃÊ±âÈ­! Áï, ÇØ´ç ±¸¹® ¾ø¾îµµ Ãâ·ÂµÊ!
-		p1.setBrand("apple"); // º¯¼öÀÌ¹Ç·Î °ªÀÌ ¹Ù²ð ¼ö ÀÖÀ½! apple Ãâ·Â
-		// => brand ÇÊµå¿¡ "¾ÖÇÃ"·Î ÃÊ±âÈ­ÇØ µÎ¾úÀ» °æ¿ì
-		// setter ¸Þ¼Òµå·Î ±»ÀÌ brand¸íÀ» Á¤ÇØ µÎÁö ¾Ê¾Æµµ µÊ
-		// ´Ü, ÇØ´ç ÇÊµå¸¦ »ó¼ö·Î ÁöÁ¤ÇÏÁö ¾Ê¾Ò±â ¶§¹®¿¡
-		// º¯°æÇÏ°íÀÚ ÇÒ ¶§´Â ¾ðÁ¦µçÁö setter ¸Þ¼Òµå¸¦ È£ÃâÇØ¼­ °ªÀ» º¯°æ °¡´ÉÇÔ
+		// p1.setBrand("ì• í”Œ");
+		// brandëŠ” ì¼ì¹˜í•˜ë¯€ë¡œ Product í´ëž˜ìŠ¤ì—ì„œ í•„ë“œ ì„ ì–¸ê³¼ ë™ì‹œì— ì´ˆê¸°í™”! ì¦‰, í•´ë‹¹ êµ¬ë¬¸ ì—†ì–´ë„ ì¶œë ¥ë¨!
+		p1.setBrand("apple"); // ë³€ìˆ˜ì´ë¯€ë¡œ ê°’ì´ ë°”ë€” ìˆ˜ ìžˆìŒ! apple ì¶œë ¥
+		// => brand í•„ë“œì— "ì• í”Œ"ë¡œ ì´ˆê¸°í™”í•´ ë‘ì—ˆì„ ê²½ìš°
+		// setter ë©”ì†Œë“œë¡œ êµ³ì´ brandëª…ì„ ì •í•´ ë‘ì§€ ì•Šì•„ë„ ë¨
+		// ë‹¨, í•´ë‹¹ í•„ë“œë¥¼ ìƒìˆ˜ë¡œ ì§€ì •í•˜ì§€ ì•Šì•˜ê¸° ë•Œë¬¸ì—
+		// ë³€ê²½í•˜ê³ ìž í•  ë•ŒëŠ” ì–¸ì œë“ ì§€ setter ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•´ì„œ ê°’ì„ ë³€ê²½ ê°€ëŠ¥í•¨
 		
 		System.out.println(p1.information());
 		
-		// default Á¢±ÙÁ¦ÇÑÀÚÀÇ Å¬·¡½º´Â
-		// ´Ù¸¥ ÆÐÅ°Áö¿¡ ÀÖÀ» °æ¿ì °®´Ù ¾µ ¼ö ¾ø°Ô Á¦ÇÑµÊ
-		// ´Ü, °°Àº ÆÐÅ°Áö¿¡ ÀÖÀ» °æ¿ì¿¡¸¸ »ç¿ë °¡´É
+		// default ì ‘ê·¼ì œí•œìžì˜ í´ëž˜ìŠ¤ëŠ”
+		// ë‹¤ë¥¸ íŒ¨í‚¤ì§€ì— ìžˆì„ ê²½ìš° ê°–ë‹¤ ì“¸ ìˆ˜ ì—†ê²Œ ì œí•œë¨
+		// ë‹¨, ê°™ì€ íŒ¨í‚¤ì§€ì— ìžˆì„ ê²½ìš°ì—ë§Œ ì‚¬ìš© ê°€ëŠ¥
 		
 		Product p2 = new Product();
 		
-		p2.setpName("¾ÖÇÃ¿öÄ¡7");
+		p2.setpName("ì• í”Œì›Œì¹˜7");
 		p2.setPrice(500000);
-		// p2.setBrand("¾ÖÇÃ");
+		// p2.setBrand("ì• í”Œ");
 		
 		System.out.println(p2.information());
 		
