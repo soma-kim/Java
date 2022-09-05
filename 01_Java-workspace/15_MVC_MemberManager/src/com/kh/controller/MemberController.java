@@ -42,7 +42,7 @@ public class MemberController {
 		int userNo = 0;
 
 		for (int i = 0; i < list.size(); i++) {
-		    userNo = list.get(i).getuserNo() + 1
+		    userNo = list.get(i).getUserNo() + 1;
 		}
 		
 		// int userNo = list.size();

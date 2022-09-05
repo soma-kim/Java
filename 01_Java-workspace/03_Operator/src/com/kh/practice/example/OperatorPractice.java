@@ -1,4 +1,4 @@
-package com.kh.practice.example;
+package com.kh.practice.example; 
 
 import java.util.Scanner;
 
@@ -7,34 +7,34 @@ public class OperatorPractice {
 	public void practice1() {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Á¤¼ö: ");
+		System.out.print("ì •ìˆ˜: ");
 		int num = sc.nextInt();
 		sc.nextLine();
 		
 		if(num > 0) {
-			System.out.println("¾ç¼ö´Ù");
+			System.out.println("ì–‘ìˆ˜ë‹¤");
 		}
 		else {
-			System.out.println("¾ç¼ö°¡ ¾Æ´Ï´Ù");
+			System.out.println("ì–‘ìˆ˜ê°€ ì•„ë‹ˆë‹¤");
 		}
 	}
 		
 		public void practice2() {
 			Scanner sc = new Scanner(System.in);
 			
-			System.out.print("Á¤¼ö: ");
+			System.out.print("ì •ìˆ˜: ");
 			int num = sc.nextInt();
 			sc.nextLine();
 			
 			if(num > 0) {
-				System.out.println("¾ç¼ö´Ù");
+				System.out.println("ì–‘ìˆ˜ë‹¤");
 			}
 			else {
 				if(num == 0) {
-					System.out.println("0ÀÌ´Ù");
+					System.out.println("0ì´ë‹¤");
 				}
 				else {
-					System.out.println("À½¼ö´Ù");
+					System.out.println("ìŒìˆ˜ë‹¤");
 				}
 		}
 	
@@ -43,91 +43,91 @@ public class OperatorPractice {
 		public void practice3() {
 			Scanner sc = new Scanner(System.in);
 			
-			System.out.print("Á¤¼ö: ");
+			System.out.print("ì •ìˆ˜: ");
 			int num = sc.nextInt();
 			sc.nextLine();
 			
 			if (num % 2 == 0) {
-				System.out.println("Â¦¼ö´Ù");
+				System.out.println("ì§ìˆ˜ë‹¤");
 			}
 			else {
-				System.out.println("È¦¼ö´Ù");
+				System.out.println("í™€ìˆ˜ë‹¤");
 			}
 		}
 		
 		public void practice4() {
 			Scanner sc = new Scanner(System.in);
 			
-			System.out.print("ÀÎ¿ø ¼ö: ");
+			System.out.print("ì¸ì› ìˆ˜: ");
 			int person = sc.nextInt();
 			sc.nextLine();
 			
-			System.out.print("»çÅÁ ¼ö: ");
+			System.out.print("ì‚¬íƒ• ìˆ˜: ");
 			int candy = sc.nextInt();
 			sc.nextLine();
 			
-			System.out.println("1ÀÎ´ç »çÅÁ °³¼ö: " + candy / person);
-			System.out.println("³²´Â »çÅÁ °³¼ö: " + candy % person);
+			System.out.println("1ì¸ë‹¹ ì‚¬íƒ• ê°œìˆ˜: " + candy / person);
+			System.out.println("ë‚¨ëŠ” ì‚¬íƒ• ê°œìˆ˜: " + candy % person);
 			
 		}
 		
 		public void practice5() {
 			Scanner sc = new Scanner(System.in);
 			
-			System.out.print("ÀÌ¸§: ");
+			System.out.print("ì´ë¦„: ");
 			String name = sc.nextLine();
 			
-			System.out.print("ÇĞ³â(¼ıÀÚ¸¸): ");
+			System.out.print("í•™ë…„(ìˆ«ìë§Œ): ");
 			int grade = sc.nextInt();
 			sc.nextLine();
 			
-			System.out.print("¹İ(¼ıÀÚ¸¸): ");
+			System.out.print("ë°˜(ìˆ«ìë§Œ): ");
 			int class_ = sc.nextInt();
 			sc.nextLine();
 			
-			System.out.print("¹øÈ£(¼ıÀÚ¸¸): ");
+			System.out.print("ë²ˆí˜¸(ìˆ«ìë§Œ): ");
 			int no = sc.nextInt();
 			sc.nextLine();
 			
-			System.out.print("¼ºº°(M/F): ");
+			System.out.print("ì„±ë³„(M/F): ");
 			char gender = sc.nextLine().charAt(0);
 			
 			if(gender == 'F' || gender == 'f') {
-				gender = '¿©';
+				gender = 'ì—¬';
 			}
 			else {
-				gender = '³²';
+				gender = 'ë‚¨';
 			}
 			
-			System.out.print("¼ºÀû(¼Ò¼öÁ¡ ¾Æ·¡ µÑÂ°ÀÚ¸®±îÁö): ");
+			System.out.print("ì„±ì (ì†Œìˆ˜ì  ì•„ë˜ ë‘˜ì§¸ìë¦¬ê¹Œì§€): ");
 			double score = sc.nextDouble();
 			sc.nextLine();
 			
-			System.out.println(grade + "ÇĞ³â " + class_ + "¹İ " + no + "¹ø " + name + " " + gender + "ÇĞ»ıÀÇ ¼ºÀûÀº " + score + "ÀÌ´Ù.");
+			System.out.println(grade + "í•™ë…„ " + class_ + "ë°˜ " + no + "ë²ˆ " + name + " " + gender + "í•™ìƒì˜ ì„±ì ì€ " + score + "ì´ë‹¤.");
 
 		}
 		
 		public void practice6() {
 			Scanner sc = new Scanner(System.in);
 			
-			System.out.print("³ªÀÌ: ");
+			System.out.print("ë‚˜ì´: ");
 			int age = sc.nextInt();
 			
 			sc.nextLine();
 			
 			if(age > 0) {
 				if (age <= 13) { 
-					System.out.println("¾î¸°ÀÌ");
+					System.out.println("ì–´ë¦°ì´");
 				}
 				else if (age <= 19) {
-					System.out.println("Ã»¼Ò³â");
+					System.out.println("ì²­ì†Œë…„");
 				}
 				else {
-					System.out.println("¼ºÀÎ");
+					System.out.println("ì„±ì¸");
 				}
 			}
 			else {
-				System.out.println("´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä");
+				System.out.println("ë‹¤ì‹œ ì…ë ¥í•˜ì„¸ìš”");
 			}
 
 		}
@@ -135,13 +135,13 @@ public class OperatorPractice {
 		public void practice7() {
 			Scanner sc = new Scanner(System.in);
 			
-			System.out.print("±¹¾î: ");
+			System.out.print("êµ­ì–´: ");
 			int score1 = sc.nextInt();
 			
-			System.out.print("¿µ¾î: ");
+			System.out.print("ì˜ì–´: ");
 			int score2 = sc.nextInt();
 			
-			System.out.print("¼öÇĞ: ");
+			System.out.print("ìˆ˜í•™: ");
 			int score3 = sc.nextInt();
 			
 			System.out.println();
@@ -149,14 +149,14 @@ public class OperatorPractice {
 			int sum = score1 + score2 + score3;
 			double avg = (score1 + score2 + score3)/3.0;
 			
-			System.out.println("ÇÕ°è: " + sum);
-			System.out.println("Æò±Õ: " + avg);
+			System.out.println("í•©ê³„: " + sum);
+			System.out.println("í‰ê· : " + avg);
 			
 			if(score1 >= 40 && score2 >= 40 && score3 >= 40 && avg >= 60) {
-				System.out.println("ÇÕ°İ");
+				System.out.println("í•©ê²©");
 			}
 			else {
-				System.out.println("ºÒÇÕ°İ");
+				System.out.println("ë¶ˆí•©ê²©");
 			}
 			
 		}
@@ -164,17 +164,17 @@ public class OperatorPractice {
 		public void practice8() {
 			Scanner sc = new Scanner(System.in);
 			
-			System.out.print("ÁÖ¹Î¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä(- Æ÷ÇÔ): ");
+			System.out.print("ì£¼ë¯¼ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”(- í¬í•¨): ");
 			 String id = sc.nextLine();
 			 
 			 if(id.charAt(7) == '2' || id.charAt(7) == '4') {
-				 System.out.println("¿©ÀÚ");
+				 System.out.println("ì—¬ì");
 			 }
 			 else if(id.charAt(7) == '1' || id.charAt(7) == '3') {
-				 System.out.println("³²ÀÚ"); 
+				 System.out.println("ë‚¨ì"); 
 			 }
 			 else {
-				 System.out.println("´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä");
+				 System.out.println("ë‹¤ì‹œ ì…ë ¥í•˜ì„¸ìš”");
 			 }
 			
 		}
@@ -182,13 +182,13 @@ public class OperatorPractice {
 		public void practice9() {
 			Scanner sc = new Scanner(System.in);
 			
-			System.out.print("Á¤¼ö1: ");
+			System.out.print("ì •ìˆ˜1: ");
 			int num1 = sc.nextInt();
 			
-			System.out.print("Á¤¼ö2: ");
+			System.out.print("ì •ìˆ˜2: ");
 			int num2 = sc.nextInt();
 			
-			System.out.print("ÀÔ·Â: ");
+			System.out.print("ì…ë ¥: ");
 			int testNum = sc.nextInt();
 			
 			boolean result = (testNum <= num1 || testNum > num2);
@@ -202,13 +202,13 @@ public class OperatorPractice {
 		public void practice10() {
 			Scanner sc = new Scanner(System.in);
 			
-			System.out.print("ÀÔ·Â1: ");
+			System.out.print("ì…ë ¥1: ");
 			int num1 = sc.nextInt();
 			
-			System.out.print("ÀÔ·Â2: ");
+			System.out.print("ì…ë ¥2: ");
 			int num2 = sc.nextInt();
 			
-			System.out.print("ÀÔ·Â3: ");
+			System.out.print("ì…ë ¥3: ");
 			int num3 = sc.nextInt();
 			
 			boolean result = (num1 == num2) && (num1 == num3) && (num2 == num3);
