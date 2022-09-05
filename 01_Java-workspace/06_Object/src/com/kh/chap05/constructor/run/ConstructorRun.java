@@ -1,45 +1,45 @@
 package com.kh.chap05.constructor.run;
 
 import com.kh.chap05.constructor.model.vo.User;
-
+ 
 public class ConstructorRun {
 
 	public static void main(String[] args) {
 		
-		// User Å¬·¡½ºÀÇ ±âº» »ı¼ºÀÚ¸¦ ÀÌ¿ëÇØ¼­ °´Ã¼ »ı¼º
+		// User í´ë˜ìŠ¤ì˜ ê¸°ë³¸ ìƒì„±ìë¥¼ ì´ìš©í•´ì„œ ê°ì²´ ìƒì„±
 		
 		User u1 = new User();
 		u1.setUserId("user01");
 		u1.setUserPwd("pass01");
-		u1.setUserName("±è¸»¶Ë");
+		u1.setUserName("ê¹€ë§ë˜¥");
 		u1.setAge(20);
-		u1.setGender('³²');
+		u1.setGender('ë‚¨');
 		
-		System.out.println(u1.information()); // ±âº»°ª¸¸ Ãâ·Â
+		System.out.println(u1.information()); // ê¸°ë³¸ê°’ë§Œ ì¶œë ¥
 		
-		// User Å¬·¡½ºÀÇ String userId¸¦ ÃÊ±âÈ­ÇØ ÁÙ ¼ö ÀÖ´Â ¸Å°³º¯¼ö »ı¼ºÀÚ¸¦ ÀÌ¿ëÇØ¼­ °´Ã¼ »ı¼º
+		// User í´ë˜ìŠ¤ì˜ String userIdë¥¼ ì´ˆê¸°í™”í•´ ì¤„ ìˆ˜ ìˆëŠ” ë§¤ê°œë³€ìˆ˜ ìƒì„±ìë¥¼ ì´ìš©í•´ì„œ ê°ì²´ ìƒì„±
 		
 		User u2 = new User("user02");
 		
-		System.out.println(u2.information()); // userId¸¸ ³»°¡ ¿øÇÏ´Â °ªÀ¸·Î ÃÊ±âÈ­
+		System.out.println(u2.information()); // userIdë§Œ ë‚´ê°€ ì›í•˜ëŠ” ê°’ìœ¼ë¡œ ì´ˆê¸°í™”
 		
-		// User Å¬·¡½ºÀÇ String userId, String userPwd, String userNameÀ»
-		// ÃÊ±âÈ­ÇØÁÙ ¼ö ÀÖ´Â ¸Å°³º¯¼ö »ı¼ºÀÚ¸¦ ÀÌ¿ëÇØ¼­ °´Ã¼ »ı¼º
+		// User í´ë˜ìŠ¤ì˜ String userId, String userPwd, String userNameì„
+		// ì´ˆê¸°í™”í•´ì¤„ ìˆ˜ ìˆëŠ” ë§¤ê°œë³€ìˆ˜ ìƒì„±ìë¥¼ ì´ìš©í•´ì„œ ê°ì²´ ìƒì„±
 		
-		User u3 = new User("user03", "pass03", "È«±æµ¿");
+		User u3 = new User("user03", "pass03", "í™ê¸¸ë™");
 		
 		System.out.println(u3.information());
 		
-		// User Å¬·¡½ºÀÇ ¸ğµç ÇÊµå¿¡ ´ëÇØ¼­ °´Ã¼ »ı¼º°ú µ¿½Ã¿¡ ³»°¡ ¿øÇÏ´Â °ªÀ¸·Î
-		// ÃÊ±âÈ­ÇÒ ¼öÀÖ´Â ¸Å°³º¯¼ö »ı¼ºÀÚ¸¦ ÀÌ¿ëÇØ¼­ °´Ã¼ »ı¼º
+		// User í´ë˜ìŠ¤ì˜ ëª¨ë“  í•„ë“œì— ëŒ€í•´ì„œ ê°ì²´ ìƒì„±ê³¼ ë™ì‹œì— ë‚´ê°€ ì›í•˜ëŠ” ê°’ìœ¼ë¡œ
+		// ì´ˆê¸°í™”í•  ìˆ˜ìˆëŠ” ë§¤ê°œë³€ìˆ˜ ìƒì„±ìë¥¼ ì´ìš©í•´ì„œ ê°ì²´ ìƒì„±
 		
-		User u4 = new User("user04", "pass04", "¹Ú°³¼ø", 21, '¿©');
+		User u4 = new User("user04", "pass04", "ë°•ê°œìˆœ", 21, 'ì—¬');
 		
-		// ¸¸¾à¿¡ ÀÌ ½ÃÁ¡¿¡¼­ ºñ¹Ğ¹øÈ£¸¦ ¹Ù²Ù°í ½ÍÀ½
-		// -> setter ¸Ş¼Òµå¸¦ ½á¾ß¸¸ ÇÔ!
+		// ë§Œì•½ì— ì´ ì‹œì ì—ì„œ ë¹„ë°€ë²ˆí˜¸ë¥¼ ë°”ê¾¸ê³  ì‹¶ìŒ
+		// -> setter ë©”ì†Œë“œë¥¼ ì¨ì•¼ë§Œ í•¨!
 		
 		u4.setUserPwd("password04!");
-		// ¸Å°³º¯¼ö »ı¼ºÀÚ°¡ ÀÖ´Ù ÇÏ´õ¶óµµ setter ¸Ş¼Òµå´Â ¹İµå½Ã ÇÊ¿äÇÔ!
+		// ë§¤ê°œë³€ìˆ˜ ìƒì„±ìê°€ ìˆë‹¤ í•˜ë”ë¼ë„ setter ë©”ì†Œë“œëŠ” ë°˜ë“œì‹œ í•„ìš”í•¨!
 		
 		System.out.println(u4.information());
 
