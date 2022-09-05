@@ -35,11 +35,7 @@ public class ConstructorRun {
 		
 		User u4 = new User("user04", "pass04", "박개순", 21, '여');
 		
-<<<<<<< HEAD
-		// 만약에 이 시점에서 비밀번호를 바꾸고 싶음 
-=======
 		// 만약에 이 시점에서 비밀번호를 바꾸고 싶음
->>>>>>> e309944912c1ce608e28f1ff90093fa28e5b1d7b
 		// -> setter 메소드를 써야만 함!
 		
 		u4.setUserPwd("password04!");
