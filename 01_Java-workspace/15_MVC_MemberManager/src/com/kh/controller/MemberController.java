@@ -8,15 +8,15 @@ public class MemberController {
 	private ArrayList<Member> list = new ArrayList<>();
 	
 	{
-		// ÃÊ±âÈ­ ºí·Ï
-		list.add(new Member(1, "user01", "pass01", "±èÀ¯Àú", 28, 'F', "user01@naver.com", "010-1234-5678"));
-		list.add(new Member(2, "user02", "pass02", "ÀÌ»ç¶÷", 20, 'M', "user02@gmail.co.kr", "010-2222-9999"));
-		list.add(new Member(3, "user03", "pass03", "ÃÖ°í´ç", 25, 'F', "user03@daum.net", "010-4812-4212"));
-		list.add(new Member(4, "user04", "pass04", "ÃÖÀú´ç", 21, 'M', "user04@facebook.co.kr", "010-8412-4105"));
+		// ì´ˆê¸°í™” ë¸”ë¡
+		list.add(new Member(1, "user01", "pass01", "ê¹€ìœ ì €", 28, 'F', "user01@naver.com", "010-1234-5678"));
+		list.add(new Member(2, "user02", "pass02", "ì´ì‚¬ëŒ", 20, 'M', "user02@gmail.co.kr", "010-2222-9999"));
+		list.add(new Member(3, "user03", "pass03", "ìµœê³ ë‹¹", 25, 'F', "user03@daum.net", "010-4812-4212"));
+		list.add(new Member(4, "user04", "pass04", "ìµœì €ë‹¹", 21, 'M', "user04@facebook.co.kr", "010-8412-4105"));
 		
 	}
 	
-	// ¾ÆÀÌµğ Áßº¹ Ã¼Å© Ã³¸®, »ç¿ë ÁßÀÎ ¾ÆÀÌµğ°¡ ÀÖÀ» ½Ã 1 ¹İÈ¯
+	// ì•„ì´ë”” ì¤‘ë³µ ì²´í¬ ì²˜ë¦¬, ì‚¬ìš© ì¤‘ì¸ ì•„ì´ë””ê°€ ìˆì„ ì‹œ 1 ë°˜í™˜
 	public int idCheck(String userId) {
 		int result = 0;
 		
@@ -32,31 +32,31 @@ public class MemberController {
 		
 	}
 	
-	// È¸¿ø Ãß°¡
+	// íšŒì› ì¶”ê°€
 	public int insertMember(String userId, String userPwd, String userName, int age, char gender, String email, String phone) {
 		
 		int before = list.size();
 		
-		// ÃÊ±âÈ­ ºí·Ï Àû¿ëÇØ¼­ ½ÃÀÛ °ªÀ» 3À¸·Î ÇØ Áà¾ß µÊ
+		// userNo = ë§ˆì§€ë§‰ userNo + 1
 		int userNo = list.size();
 		userNo = list.size() + 1;
 		
-		// ¹®Á¦Á¡1 => »èÁ¦ ¸Ş¼Òµå¿¡¼­ ÇØ°á!
-		// ÇöÀç Áß°£ ¹øÈ£ÀÇ À¯Àú¸¦ »èÁ¦ÇßÀ» ¶§ ±âÁ¸¿¡ ¼³Á¤ÇØ ÁØ userNo°¡ ±×´ë·Î À¯ÁöµÊ
-		// => 1~4±îÁö Á¸ÀçÇÒ ¶§ 3¹øÂ°¸¦ Áö¿ì¸é ³²Àº À¯ÀúÀÇ ¹øÈ£´Â 1, 2, 4
-		//    ÀÌ »óÅÂ¿¡¼­ À¯Àú¸¦ ÇÑ ¹ø ´õ Ãß°¡ÇÒ °æ¿ì userNo 4°¡ 2¸íÀÌ µÊ
+		// ë¬¸ì œì 1 => ì‚­ì œ ë©”ì†Œë“œì—ì„œ í•´ê²°!
+		// í˜„ì¬ ì¤‘ê°„ ë²ˆí˜¸ì˜ ìœ ì €ë¥¼ ì‚­ì œí–ˆì„ ë•Œ ê¸°ì¡´ì— ì„¤ì •í•´ ì¤€ userNoê°€ ê·¸ëŒ€ë¡œ ìœ ì§€ë¨
+		// => 1~4ê¹Œì§€ ì¡´ì¬í•  ë•Œ 3ë²ˆì§¸ë¥¼ ì§€ìš°ë©´ ë‚¨ì€ ìœ ì €ì˜ ë²ˆí˜¸ëŠ” 1, 2, 4
+		//    ì´ ìƒíƒœì—ì„œ ìœ ì €ë¥¼ í•œ ë²ˆ ë” ì¶”ê°€í•  ê²½ìš° userNo 4ê°€ 2ëª…ì´ ë¨
 		
 		list.add(new Member(userNo, userId, userPwd, userName, age, gender, email, phone));
 		
 		return list.size() - before;
 	}
 	
-	// È¸¿ø ÀüÃ¼ Á¶È¸
+	// íšŒì› ì „ì²´ ì¡°íšŒ
 	public ArrayList<Member> selectMemberList() {
 		return list;
 	}
 	
-	// È¸¿ø ¾ÆÀÌµğ °Ë»ö
+	// íšŒì› ì•„ì´ë”” ê²€ìƒ‰
 	public ArrayList<Member> searchMemberById(String searchedId) {
 		
 		ArrayList<Member> searchedIdList = new ArrayList<>();
@@ -71,7 +71,7 @@ public class MemberController {
 		
 	}
 	
-	// È¸¿ø ÀÌ¸§ Å°¿öµå °Ë»ö
+	// íšŒì› ì´ë¦„ í‚¤ì›Œë“œ ê²€ìƒ‰
 	public ArrayList<Member> searchMemberByName(String searchedName) {
 		
 		ArrayList<Member> searchedNameList = new ArrayList<>();
@@ -85,7 +85,7 @@ public class MemberController {
 		return searchedNameList;
 	}
 	
-	// È¸¿ø ºñ¹Ğ¹øÈ£ ÃÊ±âÈ­
+	// íšŒì› ë¹„ë°€ë²ˆí˜¸ ì´ˆê¸°í™”
 	public int initMemberPwd(String userId) {
 		
 		int result = 0;
@@ -103,7 +103,7 @@ public class MemberController {
 		return result;
 	}
 	
-	// È¸¿ø »èÁ¦
+	// íšŒì› ì‚­ì œ
 	public int deleteMember(String userId) {
 		
 		int result = 0;
@@ -117,15 +117,15 @@ public class MemberController {
 				
 			}
 			
-			// »èÁ¦ÇßÀ» ¶§ Áö¿öÁø µ¥ÀÌÅÍº¸´Ù Å« ÀÎµ¦½ºÀÇ UserNo¸¦ result¸¸Å­ »© ÁÖ¸é µÇÁö ¾ÊÀ»±î?
+			// ì‚­ì œí–ˆì„ ë•Œ ì§€ì›Œì§„ ë°ì´í„°ë³´ë‹¤ í° ì¸ë±ìŠ¤ì˜ UserNoë¥¼ resultë§Œí¼ ë¹¼ ì£¼ë©´ ë˜ì§€ ì•Šì„ê¹Œ?
 			int userNo = list.get(i).getUserNo();
 			
-			// »èÁ¦µÇ¾úÀ» ¶§ userNo¸¦ resultÀÇ ¼ö¸¸Å­ ´ç°Ü Áà¾ß µÊ
+			// ì‚­ì œë˜ì—ˆì„ ë•Œ userNoë¥¼ resultì˜ ìˆ˜ë§Œí¼ ë‹¹ê²¨ ì¤˜ì•¼ ë¨
 			if(result != 0 && userNo > i+1) {
 						
 				list.set(i, new Member(userNo - result, list.get(i).getUserId(), list.get(i).getUserPwd(), list.get(i).getUserName(),
 									  list.get(i).getAge(), list.get(i).getGender(), list.get(i).getEmail(), list.get(i).getPhone()));
-			} // => ÁøÇàÇßÀ» ¶§ ÀßµÊ!!
+			} // => ì§„í–‰í–ˆì„ ë•Œ ì˜ë¨!!
 			
 		}
 		
