@@ -38,10 +38,17 @@ public class MemberController {
 		int before = list.size();
 		
 		// userNo = 마지막 userNo + 1
-		int userNo = list.size();
-		userNo = list.size() + 1;
 		
-		// 문제점1 => 삭제 메소드에서 해결!
+		int userNo = 0;
+
+		for (int i = 0; i < list.size(); i++) {
+		    userNo = list.get(i).getuserNo() + 1
+		}
+		
+		// int userNo = list.size();
+		// userNo = list.size() + 1;
+		
+		// 문제점1 => 삭제 메소드에서 해결! 했긴 한데 userNo가 Oracle에서 프라이머리키로 쓸 예정이라 삭제되었을 때도 바뀌면 안 된다고 함 ㅠ
 		// 현재 중간 번호의 유저를 삭제했을 때 기존에 설정해 준 userNo가 그대로 유지됨
 		// => 1~4까지 존재할 때 3번째를 지우면 남은 유저의 번호는 1, 2, 4
 		//    이 상태에서 유저를 한 번 더 추가할 경우 userNo 4가 2명이 됨
@@ -118,14 +125,15 @@ public class MemberController {
 			}
 			
 			// 삭제했을 때 지워진 데이터보다 큰 인덱스의 UserNo를 result만큼 빼 주면 되지 않을까?
-			int userNo = list.get(i).getUserNo();
+			//  했긴 한데 userNo가 Oracle에서 프라이머리키로 쓸 예정이라 삭제되었을 때도 바뀌면 안 된다고 함 ㅠ
+			// int userNo = list.get(i).getUserNo();
 			
 			// 삭제되었을 때 userNo를 result의 수만큼 당겨 줘야 됨
-			if(result != 0 && userNo > i+1) {
+			// if(result != 0 && userNo > i+1) {
 						
-				list.set(i, new Member(userNo - result, list.get(i).getUserId(), list.get(i).getUserPwd(), list.get(i).getUserName(),
-									  list.get(i).getAge(), list.get(i).getGender(), list.get(i).getEmail(), list.get(i).getPhone()));
-			} // => 진행했을 때 잘됨!!
+			//	list.set(i, new Member(userNo - result, list.get(i).getUserId(), list.get(i).getUserPwd(), list.get(i).getUserName(),
+			//						  list.get(i).getAge(), list.get(i).getGender(), list.get(i).getEmail(), list.get(i).getPhone()));
+			// } // => 진행했을 때 잘됨!!
 			
 		}
 		
