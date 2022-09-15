@@ -2,7 +2,7 @@ package com.kh.model.vo;
 
 public class Member {
 	
-	// ÇÊµåºÎ
+	// í•„ë“œë¶€
 	private int userNo;
 	private String userId;
 	private String userPwd;
@@ -12,12 +12,12 @@ public class Member {
 	private String email;
 	private String phone;
 	
-	// »ı¼ºÀÚºÎ
+	// ìƒì„±ìë¶€
 	public Member() {
 		
 	}
 	
-	// insertMemer() ¿øÈ°ÇÑ ÁøÇàÀ» À§ÇØ userNo¸¦ »« »ı¼ºÀÚ Ãß°¡
+	// insertMemer() ì›í™œí•œ ì§„í–‰ì„ ìœ„í•´ userNoë¥¼ ëº€ ìƒì„±ì ì¶”ê°€
 	public Member(String userId, String userPwd, String userName, int age, char gender, String email, String phone) {
 		super();
 		this.userId = userId;
@@ -42,7 +42,7 @@ public class Member {
 		this.phone = phone;
 	}
 	
-	// ¸Ş¼ÒµåºÎ
+	// ë©”ì†Œë“œë¶€
 
 	public int getUserNo() {
 		return userNo;
