@@ -73,7 +73,7 @@ for(int i = 0; i < list.size(); i++) {
 		
 		return searchList;
 		
-	}
+	} 
 	
 	public int initMemberPwd(String userId) {
 		
