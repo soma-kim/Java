@@ -170,10 +170,34 @@ public class MemberView {
 	// 비밀번호 초기화
 	public void initMemberPwd() {
 		
+		System.out.println("비밀번호 초기화 화면입니다.");
+		System.out.print("비밀번호를 초기화 대상 아이디: ");
+		String userId = sc.nextLine();
+		
+		int result = mc.initMemberPwd(userId);
+		
+		if (result == 0) {
+			System.out.println("일치하는 아이디가 없습니다.");
+		} else {
+			System.out.println("회원 아이디 '" + userId + "'의 비밀번호가 초기화되었습니다.");
+		}
+		
 	}
 	
 	// 회원 삭제
 	public void deleteMember() {
+		
+		System.out.println("회원 삭제 화면입니다.");
+		System.out.print("삭제할 회원 아이디: ");
+		String userId = sc.nextLine();
+		
+		int result = mc.deleteMember(userId);
+		
+		if (result == 0) {
+			System.out.println("일치하는 아이디가 없습니다.");
+		} else {
+			System.out.println("회원 아이디 '" + userId + "'가 성공적으로 삭제되었습니다.");
+		}
 		
 	}
 	

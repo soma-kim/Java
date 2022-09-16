@@ -75,11 +75,33 @@ for(int i = 0; i < list.size(); i++) {
 		
 	}
 	
-	public void initMemberPwd() {
+	public int initMemberPwd(String userId) {
+		
+		int result = 0;
+		
+		for(int i = 0; i < list.size(); i++) {
+			if(list.get(i).getUserId().equals(userId)) {
+				list.get(i).setUserPwd("P@s$W0rd!");
+				result++;
+			}
+		}
+		
+		return result;
 		
 	}
 	
-	public void deleteMember() {
+	public int deleteMember(String userId) {
+		
+		int result = 0;
+		
+		for(int i = 0; i < list.size(); i++) {
+			if(list.get(i).getUserId().equals(userId)) {
+				list.remove(i--);
+				result++;
+			}
+		}
+		
+		return result;
 		
 	}
 	
